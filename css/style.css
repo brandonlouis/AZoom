@@ -1,34 +1,13 @@
+/* General */
 body {
     font-family: "Segoe UI", "Helvetica Neue";
     background-color: #2d333d;
     margin: 0%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.navBar {
-    width: 100%;
-    animation: hFadeIn 2s ease-out;
-}
-
-.navContainer {
-    margin: 0 10%;
-}
-
-.homeLogo {
-    float: left;
-    margin: 27px 26px 0 0;
-}
-
-
-/* Right elements for Login and Searchbox */
-.navRight {
-    float: right;
-    display: flex;
-    margin-top: 22px;
-}
-
-/* Navbar login button */
-.navLogin {
+button {
     font-family: "Segoe UI", "Helvetica Neue";
     background-color: #ffc107;
     border: none;
@@ -40,9 +19,63 @@ body {
     margin: 9px 0;
     cursor: pointer;
     border-radius: 6px;
-    margin-left: 15px; /* space from Searchbox */
+    font-weight: 500;
 }
 
+
+/* Navbar */
+.navContainer {
+    margin: 0 10%;
+    animation: hFadeIn 2s ease-out;
+
+}
+
+/* Left navbar links */
+.navContainer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.homeLogo {
+    float: left;
+    margin: 27px 26px 0 0;
+}
+
+.navLinks {
+    display: inline-block;
+}
+
+.navLinks li {
+    float: left;
+    margin: 0 8px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 30px 6px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.active {
+    color: #f9ac43;
+}
+
+/* Right navbar elements (Login and Searchbox) */
+.navRight {
+    float: right;
+    display: flex;
+    margin-top: 22px;
+}
+
+/* Navbar login button */
+.navBtn {
+    margin-left: 15px; /* space from Searchbox */
+}
 
 /* Navbar searchbox */
 input[type=search] {
@@ -69,42 +102,7 @@ input[type=search]:focus {
 }
 
 
-/* Navbar links */
-.navBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.navLinks {
-    display: inline-block;
-}
-
-.navLinks li {
-    float: left;
-    margin: 0 8px;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    margin: 30px 6px;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.active {
-    color: #f9ac43;
-}
-
-
 /* Banner */
-.bannerContent {
-    width: 100%;
-}
-
 /* Left banner */
 .bannerLeft {
     float: left;
@@ -118,7 +116,7 @@ li a {
 
 .bannerLeft h1 {
     color: white;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 600;
     margin-bottom: 5%;
     margin-top: 0%;
@@ -132,27 +130,17 @@ li a {
     animation: hFadeIn 2s ease-out;
 }
 
-.bannerRent {
-    font-family: "Segoe UI", "Helvetica Neue";
-    background-color: #ffc107;
-    border: none;
-    padding: 12px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
+.bannerBtn {
+    padding: 12px 30px;
+    font-size: 20px;
     animation: hFadeIn 2s ease-out;
-
 }
 
 .bannerFleet {
     color: white;
     margin-left: 50px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
     animation: hFadeIn 2s ease-out;
 }
 
@@ -178,39 +166,92 @@ li a {
 .clear { clear:both; }
 
 
-/* Brand bar */
-.brandContainer {
+/* Logo section */
+.logoContainer {
     width: 80%;
 }
 
-.brandContainer {
+.logoContainer {
     display: table;
     table-layout: fixed;
     margin: 0 10%;
 }
 
-.brandContainer span {
+.logoContainer span {
     display: table-cell;
     text-align: center;
 }
 
-.brandContainer img {
+.logoContainer img {
     margin: 50px 75px;
     animation: hFadeIn 2s ease-out;
     transition: transform .2s ease-in-out; 
 }
 
-.brandContainer img:hover { 
+.logoContainer img:hover { 
     transform: scale(1.7); 
 }
 
 
+/* About section */
+/* Left section */
+.aboutLeft {
+    float: left;
+    height: 700px;
+    width: 35%;
+    margin-left: 10%;
+    line-height: 700px;
+    text-align: right;
+    overflow: hidden;
+}
 
+.aboutLeft img {
+    vertical-align: middle;
+    animation: zoomAppear 1s ease;
+}
 
+/* Right section */
+.aboutRight {
+    float: right;
+    height: 700px;
+    width: 45%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.aboutRight span {
+    margin-left: 60px;
+}
 
+.aboutTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffc107;
+    animation: hFadeIn 2s ease-out;
+}
 
+.aboutRight h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0;
+    animation: hFadeIn 2s ease-out;
+}
 
+.aboutSub {
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+    animation: hFadeIn 2s ease-out;
+}
+
+.aboutBtn {
+    padding: 12px 40px;
+    margin-top: 5%;
+    font-size: 20px;
+    animation: hFadeIn 2s ease-out;
+}
 
 
 
@@ -251,4 +292,9 @@ li a {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes zoomAppear {
+    0% { transform: scale(1.5); }
+    100% { transform: scale(1); }
 }
