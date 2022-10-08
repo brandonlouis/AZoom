@@ -1,0 +1,254 @@
+body {
+    font-family: "Segoe UI", "Helvetica Neue";
+    background-color: #2d333d;
+    margin: 0%;
+    overflow-x: hidden;
+}
+
+.navBar {
+    width: 100%;
+    animation: hFadeIn 2s ease-out;
+}
+
+.navContainer {
+    margin: 0 10%;
+}
+
+.homeLogo {
+    float: left;
+    margin: 27px 26px 0 0;
+}
+
+
+/* Right elements for Login and Searchbox */
+.navRight {
+    float: right;
+    display: flex;
+    margin-top: 22px;
+}
+
+/* Navbar login button */
+.navLogin {
+    font-family: "Segoe UI", "Helvetica Neue";
+    background-color: #ffc107;
+    border: none;
+    padding: 8px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 15px; /* space from Searchbox */
+}
+
+
+/* Navbar searchbox */
+input[type=search] {
+    font-family: "Segoe UI", "Helvetica Neue";
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 6px;
+    background-color: #212529;
+    color:white;
+    font-size: 16px;
+}
+  
+input[type=search]:focus {
+    box-shadow: 0 0 7px #3671ca;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border: 1px solid #3671ca;
+}
+
+
+/* Navbar links */
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navLinks {
+    display: inline-block;
+}
+
+.navLinks li {
+    float: left;
+    margin: 0 8px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 30px 6px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.active {
+    color: #f9ac43;
+}
+
+
+/* Banner */
+.bannerContent {
+    width: 100%;
+}
+
+/* Left banner */
+.bannerLeft {
+    float: left;
+    height: 700px;
+    width: 40%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerLeft h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    animation: hFadeIn 2s ease-out;
+}
+
+.bannerLeft p {
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+    margin-bottom: 5%;
+    animation: hFadeIn 2s ease-out;
+}
+
+.bannerRent {
+    font-family: "Segoe UI", "Helvetica Neue";
+    background-color: #ffc107;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    animation: hFadeIn 2s ease-out;
+
+}
+
+.bannerFleet {
+    color: white;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    animation: hFadeIn 2s ease-out;
+}
+
+/* Right banner */
+.bannerRight {
+    float: right;
+    height: 700px;
+    width: 50%;
+    background-image: url("../img/bg/rightBanner_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    box-shadow: 300px 0px 1000px #2d333d inset;
+    line-height: 700px;
+    text-align: right;
+    animation: fadeIn 2s;
+}
+
+.bannerRight img {
+    vertical-align: middle;
+    animation: flyInRight 1s ease-out;
+}
+
+.clear { clear:both; }
+
+
+/* Brand bar */
+.brandContainer {
+    width: 80%;
+}
+
+.brandContainer {
+    display: table;
+    table-layout: fixed;
+    margin: 0 10%;
+}
+
+.brandContainer span {
+    display: table-cell;
+    text-align: center;
+}
+
+.brandContainer img {
+    margin: 50px 75px;
+    animation: hFadeIn 2s ease-out;
+    transition: transform .2s ease-in-out; 
+}
+
+.brandContainer img:hover { 
+    transform: scale(1.7); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes flyInRight {
+    0% { 
+        transform: translateX(100%);
+    }
+
+    100% { 
+        transform: translateX(0);
+    }
+}
+
+@keyframes hFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
