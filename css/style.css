@@ -1,4 +1,6 @@
 /* General */
+.clear { clear:both; }
+
 body {
     font-family: "Segoe UI", "Helvetica Neue";
     background-color: #2d333d;
@@ -22,12 +24,32 @@ button {
     font-weight: 500;
 }
 
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffc107;
+    animation: hFadeIn 2s ease-out;
+}
+
+.sectionSubTitle {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0;
+    animation: hFadeIn 2s ease-out;
+}
+
+.sectionText {
+    margin-top: -1em;
+    font-size: 20px;
+    animation: hFadeIn 2s ease-out;
+}
+
 
 /* Navbar */
 .navContainer {
     margin: 0 10%;
     animation: hFadeIn 2s ease-out;
-
 }
 
 /* Left navbar links */
@@ -136,12 +158,9 @@ input[type=search]:focus {
     animation: hFadeIn 2s ease-out;
 }
 
-.bannerFleet {
+.bannerLeft .sectionTitle {
     color: white;
     margin-left: 50px;
-    font-weight: 600;
-    font-size: 20px;
-    animation: hFadeIn 2s ease-out;
 }
 
 /* Right banner */
@@ -149,9 +168,11 @@ input[type=search]:focus {
     float: right;
     height: 700px;
     width: 50%;
-    background-image: url("../img/bg/rightBanner_bg.png");
+    background-image: url("../img/etc/rightBanner_bg.png");
+    background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 300px 0px 1000px #2d333d inset;
     line-height: 700px;
     text-align: right;
@@ -163,15 +184,10 @@ input[type=search]:focus {
     animation: flyInRight 1s ease-out;
 }
 
-.clear { clear:both; }
-
 
 /* Logo section */
 .logoContainer {
     width: 80%;
-}
-
-.logoContainer {
     display: table;
     table-layout: fixed;
     margin: 0 10%;
@@ -225,25 +241,12 @@ input[type=search]:focus {
     margin-left: 60px;
 }
 
-.aboutTitle {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffc107;
-    animation: hFadeIn 2s ease-out;
-}
-
 .aboutRight h2 {
     color: white;
-    font-size: 50px;
-    font-weight: 600;
-    margin-top: 0;
-    animation: hFadeIn 2s ease-out;
 }
 
-.aboutSub {
-    font-size: 20px;
+.aboutRight .sectionText {
     color: rgb(190, 190, 190);
-    animation: hFadeIn 2s ease-out;
 }
 
 .aboutBtn {
@@ -254,8 +257,57 @@ input[type=search]:focus {
 }
 
 
+/* Why us section */
+.whyUsWrapper {
+    background-image: url('../img/etc/whyUs_bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.whyUsContainer {
+    margin: 0 10%;
+    height: 700px;
+}
 
+/* Top section */
+.whyUsTop {
+    padding: 10% 20% 30px;
+    text-align: center;
+}
+
+.whyUsTop .sectionSubTitle {
+    color: black;
+}
+
+.whyUsTop .sectionText {
+    color: rgb(95, 95, 95);
+}
+
+/* Bottom section */
+.whyUsBtm {
+    color:white;
+    display: flex;
+    table-layout: fixed;
+}
+
+.whyUsBtm span {
+    display: table-cell;
+    text-align: left;
+}
+
+.whyUsBox {
+    margin: 2%;
+    background-color: #2d333d;
+    padding: 30px;
+    border-top: 8px solid #ffc107;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.1);
+}
+
+.whyUsBox p {
+    font-size: 20px;
+}
 
 
 
