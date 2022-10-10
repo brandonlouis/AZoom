@@ -304,15 +304,15 @@ input[type=search]:focus {
 
 
 /* Fleet section */
+/* Section title */
 .fleetTitle {
     margin-top: 300px;
     text-align: center;
 }
 
+/* Car display */
 .fleetContainer {
     margin: 0 10%;
-    margin-bottom: 500px;
-    height: 700px;
 }
 
 .fleetRow {
@@ -337,6 +337,13 @@ input[type=search]:focus {
     color: #ffc107;
 }
 
+.carBox h1::after {
+    content: " /day";
+    color: rgb(150, 150, 150);
+    font-weight: 100;
+    font-size: 20px;
+}
+
 .carBox h2 {
     font-weight: 400;
 }
@@ -345,6 +352,7 @@ input[type=search]:focus {
     width:100%;
 }
 
+/* Full fleet button */
 .fullFleet {
     width: 100%;
     text-align: center;
@@ -353,6 +361,30 @@ input[type=search]:focus {
 .fullFleetBtn {
     width: 300px;
 }
+
+
+/* Footer section */
+.footerContainer{
+    margin-top: 7%;
+    background-color: #242931;
+    text-align: center;
+}
+
+.footerSection {
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footerIcons {
+    margin: 0 10px;
+}
+
+.footerText {
+    color: white;
+}
+
+
 
 
 
