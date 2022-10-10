@@ -24,6 +24,29 @@ button {
     margin-top: 5%;
 }
 
+
+input {
+    font-family: "Segoe UI", "Helvetica Neue";
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 6px;
+    background-color: #212529;
+    color:white;
+    font-size: 16px;
+}
+input:focus {
+    box-shadow: 0 0 7px #3671ca;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border: 1px solid #3671ca;
+}
+
 .sectionTitle {
     font-size: 20px;
     font-weight: 600;
@@ -95,47 +118,21 @@ li a {
     margin-top: 22px;
 }
 
-/* Navbar login button */
-.navBtn {
+.loginBtn {
     padding: 8px 13px;
     margin: 9px 0 9px 15px;
     font-size: 16px;
 }
 
-/* Navbar searchbox */
-input[type=search] {
-    font-family: "Segoe UI", "Helvetica Neue";
-    width: 100%;
-    padding: 8px 12px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid white;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    border-radius: 6px;
-    background-color: #212529;
-    color:white;
-    font-size: 16px;
-}
-  
-input[type=search]:focus {
-    box-shadow: 0 0 7px #3671ca;
-    padding: 8px 12px;
-    margin: 8px 0;
-    border: 1px solid #3671ca;
-}
-
 
 /* Banner */
-/* Left banner */
+/* Title and button */
 .bannerLeft {
     float: left;
     height: 700px;
     width: 40%;
     margin-left: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -162,7 +159,7 @@ input[type=search]:focus {
     margin-left: 50px;
 }
 
-/* Right banner */
+/* Honda and background */
 .bannerRight {
     float: right;
     height: 700px;
@@ -172,7 +169,7 @@ input[type=search]:focus {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 300px 0px 1000px #2d333d inset;
+    box-shadow: 300px 0px 300px #2d333d inset;
     line-height: 700px;
     text-align: right;
     animation: fadeIn 2s;
@@ -209,7 +206,7 @@ input[type=search]:focus {
 
 
 /* About section */
-/* Left section */
+/* Image */
 .aboutLeft {
     float: left;
     height: 700px;
@@ -225,14 +222,13 @@ input[type=search]:focus {
     animation: zoomAppear 1s ease;
 }
 
-/* Right section */
+/* Title and button */
 .aboutRight {
     float: right;
     height: 700px;
     width: 45%;
     margin-right: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -261,12 +257,12 @@ input[type=search]:focus {
 
 .whyUsContainer {
     margin: 0 10%;
-    height: 700px;
+    height: 650px;
 }
 
-/* Top section */
+/* Title */
 .whyUsTop {
-    padding: 10% 20% 30px;
+    padding: 7% 20% 30px;
     text-align: center;
 }
 
@@ -278,15 +274,13 @@ input[type=search]:focus {
     color: rgb(90, 90, 90);
 }
 
-/* Bottom section */
+/* Boxes */
 .whyUsBtm {
     color:white;
     display: flex;
-    table-layout: fixed;
 }
 
 .whyUsBtm span {
-    display: table-cell;
     text-align: left;
 }
 
@@ -304,13 +298,13 @@ input[type=search]:focus {
 
 
 /* Fleet section */
-/* Section title */
+/* Title */
 .fleetTitle {
     margin-top: 300px;
     text-align: center;
 }
 
-/* Car display */
+/* Cars */
 .fleetContainer {
     margin: 0 10%;
 }
@@ -352,7 +346,7 @@ input[type=search]:focus {
     width:100%;
 }
 
-/* Full fleet button */
+/* See fleet button */
 .fullFleet {
     width: 100%;
     text-align: center;
@@ -363,24 +357,70 @@ input[type=search]:focus {
 }
 
 
-/* Footer section */
-.footerContainer{
-    margin-top: 7%;
-    background-color: #242931;
+/* Newsletter section */
+.newsletterFalseFooter {
+    margin-top: 8%;
+    background: linear-gradient(to bottom, #2d333d 50%, #242931 50%);
+    width: 100%;
     text-align: center;
 }
 
-.footerSection {
-    width: 33%;
+/* Title */
+.newsletterContainer {
+    padding: 4% 6%;
     display: inline-block;
     vertical-align: middle;
+    background-color: #1c2026;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.15);
+    border-radius: 12px;
+}
+
+/* Text and button */
+.newsletterInput {
+    width: 70%
+}
+
+.newsletterBtn {
+    padding: 9px 13px;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Footer section */
+.footerWrapper{
+    background-color: #242931;
+    width: 100%;
+}
+
+.footerContainer {
+    padding: 10px 0 100px 0;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+}
+
+/* Azoom Logo */
+.footerLeft {
+    width: 33%;
+    text-align: left;
+}
+
+/* Social media */
+.footerMiddle {
+    width: 33%;
+    text-align: center;
 }
 
 .footerIcons {
     margin: 0 10px;
+    width: 35px;
 }
 
-.footerText {
+/* Contact details */
+.footerRight {
+    width: 33%;
+    text-align: right;
     color: white;
 }
 

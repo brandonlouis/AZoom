@@ -21,8 +21,8 @@
                 </ul>
 
                 <div class="navRight">
-                    <form role="search"><input type="search" class="navSearch" placeholder="Search..." aria-label="Search"></form>
-                    <button class="navBtn" type="button" onclick="openForm()">Login</button>
+                    <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
+                    <button class="loginBtn" type="button" onclick="openForm()">Login</button>
                 </div>
             </div>
         </header>
@@ -165,24 +165,40 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="footerContainer">
-            <div class="footerSection">
-                <img src="img/logos/fullLogo-w.png" width="150px">
-            </div>
-
-            <div class="footerSection">
+        <div class="newsletterFalseFooter">
+            <div class="newsletterContainer">
                 <span>
-                    <img class="footerIcons" src="img/icons/facebook.png" width="50px">
-                    <img class="footerIcons" src="img/icons/instagram.png" width="50px">
-                    <img class="footerIcons" src="img/icons/twitter.png" width="50px">
+                    <h2 class="sectionSubTitle">Subscribe to our newsletter</h2>
+                    <p class="sectionText">Get access to exclusive deals and updates</p>
                 </span>
+                <span>
+                    <input class="newsletterInput" type="email" placeholder="Enter your email">
+                    <button class="newsletterBtn" type="button">Subscribe</button>
             </div>
+        </div>
 
-            <div class="footerSection">
-                <span class="footerText">
-                    <p>Contact Us:</p>
-                    <p>hello@azoom.com</p>
-                    <p>+65 9123 4567</p>
+        <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
+
+        <div class="footerWrapper">
+            <div class="footerContainer">
+                <span class="footerLeft">
+                    <a href="index.html"><img src="img/logos/fullLogo-w.png" width="150px"></a>
+                </span>
+
+                <span class="footerMiddle">
+                    <span>
+                        <a href="https://www.facebook.com/"><img class="footerIcons" src="img/icons/facebook.png"></a>
+                        <a href="https://www.instagram.com/"><img class="footerIcons" src="img/icons/instagram.png"></a>
+                        <a href="https://www.twitter.com/"><img class="footerIcons" src="img/icons/twitter.png"></a>
+                    </span>
+                </span>
+
+                <span class="footerRight">
+                    <span>
+                        <p>Contact us:</p>
+                        <p>hello@azoom.com</p>
+                        <p>+65 9123 4567</p>
+                    </span>
                 </span>
             </div>
         </div>
