@@ -1,51 +1,31 @@
+/* General */
+.clear { clear:both; }
+
 body {
     font-family: "Segoe UI", "Helvetica Neue";
     background-color: #2d333d;
     margin: 0%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.navBar {
-    width: 100%;
-    animation: hFadeIn 2s ease-out;
-}
-
-.navContainer {
-    margin: 0 10%;
-}
-
-.homeLogo {
-    float: left;
-    margin: 27px 26px 0 0;
-}
-
-
-/* Right elements for Login and Searchbox */
-.navRight {
-    float: right;
-    display: flex;
-    margin-top: 22px;
-}
-
-/* Navbar login button */
-.navLogin {
+button {
     font-family: "Segoe UI", "Helvetica Neue";
-    background-color: #ffc107;
+    cursor: pointer;
     border: none;
-    padding: 8px 13px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 9px 0;
-    cursor: pointer;
+    text-align: center;
+    background-color: #ffc107;
     border-radius: 6px;
-    margin-left: 15px; /* space from Searchbox */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 0;
+    margin-top: 5%;
 }
 
 
-/* Navbar searchbox */
-input[type=search] {
+input {
     font-family: "Segoe UI", "Helvetica Neue";
     width: 100%;
     padding: 8px 12px;
@@ -60,21 +40,53 @@ input[type=search] {
     color:white;
     font-size: 16px;
 }
-  
-input[type=search]:focus {
+input:focus {
     box-shadow: 0 0 7px #3671ca;
     padding: 8px 12px;
     margin: 8px 0;
     border: 1px solid #3671ca;
 }
 
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffc107;
+    animation: hFadeIn 2s ease-out;
+}
 
-/* Navbar links */
-.navBar ul {
+.sectionSubTitle {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0;
+    animation: hFadeIn 2s ease-out;
+}
+
+.sectionText {
+    margin-top: -1em;
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+    animation: hFadeIn 2s ease-out;
+}
+
+
+/* Navbar */
+.navContainer {
+    margin: 0 10%;
+    animation: hFadeIn 2s ease-out;
+}
+
+/* Left navbar links */
+.navContainer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.homeLogo {
+    float: left;
+    margin: 27px 26px 0 0;
 }
 
 .navLinks {
@@ -99,72 +111,65 @@ li a {
     color: #f9ac43;
 }
 
-
-/* Banner */
-.bannerContent {
-    width: 100%;
+/* Right navbar elements (Login and Searchbox) */
+.navRight {
+    float: right;
+    display: flex;
+    margin-top: 22px;
 }
 
-/* Left banner */
+.loginBtn {
+    padding: 8px 13px;
+    margin: 9px 0 9px 15px;
+    font-size: 16px;
+}
+
+
+/* Banner */
+/* Title and button */
 .bannerLeft {
     float: left;
     height: 700px;
     width: 40%;
     margin-left: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .bannerLeft h1 {
     color: white;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 600;
     margin-bottom: 5%;
     margin-top: 0%;
     animation: hFadeIn 2s ease-out;
 }
 
-.bannerLeft p {
-    font-size: 20px;
-    color: rgb(190, 190, 190);
-    margin-bottom: 5%;
+.bannerLeft .sectionText {
+    margin-top: 0;
+}
+
+.bannerBtn {
+    padding: 12px 30px;
     animation: hFadeIn 2s ease-out;
 }
 
-.bannerRent {
-    font-family: "Segoe UI", "Helvetica Neue";
-    background-color: #ffc107;
-    border: none;
-    padding: 12px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-    animation: hFadeIn 2s ease-out;
-
-}
-
-.bannerFleet {
+.bannerLeft .sectionTitle {
     color: white;
     margin-left: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    animation: hFadeIn 2s ease-out;
 }
 
-/* Right banner */
+/* Honda and background */
 .bannerRight {
     float: right;
     height: 700px;
     width: 50%;
-    background-image: url("../img/bg/rightBanner_bg.png");
+    background-image: url("../img/etc/rightBanner_bg.png");
+    background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
-    box-shadow: 300px 0px 1000px #2d333d inset;
+    background-size: cover;
+    box-shadow: 300px 0px 300px #2d333d inset;
     line-height: 700px;
     text-align: right;
     animation: fadeIn 2s;
@@ -175,44 +180,249 @@ li a {
     animation: flyInRight 1s ease-out;
 }
 
-.clear { clear:both; }
 
-
-/* Brand bar */
-.brandContainer {
+/* Logo section */
+.logoContainer {
     width: 80%;
-}
-
-.brandContainer {
     display: table;
     table-layout: fixed;
     margin: 0 10%;
 }
 
-.brandContainer span {
+.logoContainer span {
     display: table-cell;
     text-align: center;
 }
 
-.brandContainer img {
+.logoContainer img {
     margin: 50px 75px;
     animation: hFadeIn 2s ease-out;
     transition: transform .2s ease-in-out; 
 }
 
-.brandContainer img:hover { 
+.logoContainer img:hover { 
     transform: scale(1.7); 
 }
 
 
+/* About section */
+/* Image */
+.aboutLeft {
+    float: left;
+    height: 700px;
+    width: 35%;
+    margin-left: 10%;
+    line-height: 700px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.aboutLeft img {
+    vertical-align: middle;
+    animation: zoomAppear 1s ease;
+}
+
+/* Title and button */
+.aboutRight {
+    float: right;
+    height: 700px;
+    width: 45%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutRight span {
+    margin-left: 60px;
+}
+
+.aboutRight h2 {
+    color: white;
+}
+
+.aboutBtn {
+    padding: 12px 40px;
+    animation: hFadeIn 2s ease-out;
+}
 
 
+/* Why us section */
+.whyUsWrapper {
+    background-image: url('../img/etc/whyUs_bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whyUsContainer {
+    margin: 0 10%;
+    height: 650px;
+}
+
+/* Title */
+.whyUsTop {
+    padding: 7% 20% 30px;
+    text-align: center;
+}
+
+.whyUsTop .sectionSubTitle {
+    color: black;
+}
+
+.whyUsTop .sectionText {
+    color: rgb(90, 90, 90);
+}
+
+/* Boxes */
+.whyUsBtm {
+    color:white;
+    display: flex;
+}
+
+.whyUsBtm span {
+    text-align: left;
+}
+
+.whyUsBox {
+    margin: 2%;
+    background-color: #2d333d;
+    padding: 30px;
+    border-top: 8px solid #ffc107;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.1);
+}
+
+.whyUsBox p {
+    font-size: 20px;
+}
 
 
+/* Fleet section */
+/* Title */
+.fleetTitle {
+    margin-top: 300px;
+    text-align: center;
+}
+
+/* Cars */
+.fleetContainer {
+    margin: 0 10%;
+}
+
+.fleetRow {
+    color:white;
+    display: flex;
+    table-layout: fixed;
+}
+
+.fleetRow span {
+    display: table-cell;
+    text-align: left;
+}
+
+.carBox {
+    margin: 1%;
+    background-color: #2d333d;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.2);
+}
+
+.carBox h1::first-letter {
+    color: #ffc107;
+}
+
+.carBox h1::after {
+    content: " /day";
+    color: rgb(150, 150, 150);
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.carBox h2 {
+    font-weight: 400;
+}
+
+.carRentBtn {
+    width:100%;
+}
+
+/* See fleet button */
+.fullFleet {
+    width: 100%;
+    text-align: center;
+}
+
+.fullFleetBtn {
+    width: 300px;
+}
 
 
+/* Newsletter section */
+.newsletterFalseFooter {
+    margin-top: 8%;
+    background: linear-gradient(to bottom, #2d333d 50%, #242931 50%);
+    width: 100%;
+    text-align: center;
+}
+
+/* Title */
+.newsletterContainer {
+    padding: 4% 6%;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #1c2026;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.15);
+    border-radius: 12px;
+}
+
+/* Text and button */
+.newsletterInput {
+    width: 70%
+}
+
+.newsletterBtn {
+    padding: 9px 13px;
+    font-size: 16px;
+    margin: 0;
+}
 
 
+/* Footer section */
+.footerWrapper{
+    background-color: #242931;
+    width: 100%;
+}
+
+.footerContainer {
+    padding: 10px 0 100px 0;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+}
+
+/* Azoom Logo */
+.footerLeft {
+    width: 33%;
+    text-align: left;
+}
+
+/* Social media */
+.footerMiddle {
+    width: 33%;
+    text-align: center;
+}
+
+.footerIcons {
+    margin: 0 10px;
+    width: 35px;
+}
+
+/* Contact details */
+.footerRight {
+    width: 33%;
+    text-align: right;
+    color: white;
+}
 
 
 
@@ -221,13 +431,9 @@ li a {
 
 /* Animations */
 @keyframes flyInRight {
-    0% { 
-        transform: translateX(100%);
-    }
+    0% { transform: translateX(100%); }
 
-    100% { 
-        transform: translateX(0);
-    }
+    100% { transform: translateX(0); }
 }
 
 @keyframes hFadeIn {
@@ -251,4 +457,9 @@ li a {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes zoomAppear {
+    0% { transform: scale(1.5); }
+    100% { transform: scale(1); }
 }
