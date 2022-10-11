@@ -107,7 +107,7 @@ li a {
     text-decoration: none;
 }
 
-.active {
+.navActive {
     color: #f9ac43;
 }
 
@@ -125,6 +125,10 @@ li a {
 }
 
 
+
+
+
+/* INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML */
 /* Banner */
 /* Title and button */
 .bannerLeft {
@@ -183,10 +187,10 @@ li a {
 
 /* Logo section */
 .logoContainer {
-    width: 80%;
+    width: 90%;
     display: table;
     table-layout: fixed;
-    margin: 0 10%;
+    margin: 0 5%;
 }
 
 .logoContainer span {
@@ -195,9 +199,10 @@ li a {
 }
 
 .logoContainer img {
-    margin: 50px 75px;
+    width: 70px;
+    margin: 50px 5%;
     animation: hFadeIn 2s ease-out;
-    transition: transform .2s ease-in-out; 
+    transition: transform .2s ease-in-out;
 }
 
 .logoContainer img:hover { 
@@ -241,7 +246,7 @@ li a {
 }
 
 .aboutBtn {
-    padding: 12px 40px;
+    padding: 12px 35px;
     animation: hFadeIn 2s ease-out;
 }
 
@@ -264,6 +269,10 @@ li a {
 .whyUsTop {
     padding: 7% 20% 30px;
     text-align: center;
+}
+
+.whyUsTop .sectionTitle {
+    text-shadow: 0 0 20px rgb(0 0 0 / 0.3);
 }
 
 .whyUsTop .sectionSubTitle {
@@ -307,38 +316,41 @@ li a {
 /* Cars */
 .fleetContainer {
     margin: 0 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
-.fleetRow {
-    color:white;
-    display: flex;
-    table-layout: fixed;
-}
-
-.fleetRow span {
-    display: table-cell;
-    text-align: left;
-}
-
-.carBox {
-    margin: 1%;
+.fleetItem {
+    margin: 3%;
     background-color: #2d333d;
     padding: 30px;
     box-shadow: 0 20px 50px rgb(0 0 0 / 0.2);
+    color: white;
 }
 
-.carBox h1::first-letter {
+.fleetItem p {
+    margin: 15px 0 0;
+    color: #cc9900;
+    font-size: 14px;
+    text-align: right;
+}
+
+.fleetItem h1 {
+    margin: -25px 0 0;
+}
+
+.fleetItem h1::first-letter {
     color: #ffc107;
 }
 
-.carBox h1::after {
+.fleetItem h1::after {
     content: " /day";
     color: rgb(150, 150, 150);
     font-weight: 100;
-    font-size: 20px;
+    font-size: 25px;
 }
 
-.carBox h2 {
+.fleetItem h2 {
     font-weight: 400;
 }
 
@@ -352,8 +364,9 @@ li a {
     text-align: center;
 }
 
-.fullFleetBtn {
-    width: 300px;
+.fullFleet button {
+    width: 15%;
+    margin-top: 4%;
 }
 
 
@@ -388,7 +401,7 @@ li a {
 
 
 /* Footer section */
-.footerWrapper{
+footer {
     background-color: #242931;
     width: 100%;
 }
@@ -427,6 +440,13 @@ li a {
 
 
 
+
+/* FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML */
+.fleetPage .fleetTitle {
+    margin: 0 10%;
+    color: white;
+    text-align: left;
+}
 
 
 /* Animations */
