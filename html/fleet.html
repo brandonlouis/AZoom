@@ -22,11 +22,33 @@
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
-                    <button class="loginBtn" type="button" onclick="openForm()">Login</button>
+                    <button class="navLoginBtn" type="button" onclick="document.getElementById('loginPopup').style.display='block'">Login</button>
                 </div>
             </div>
         </header>
-        
+
+        <div id="loginPopup" class="modalBg">
+            <form class="loginContent" action="/action_page.php" method="post">
+                <div class="loginContainer">
+                    <div onclick="document.getElementById('loginPopup').style.display='none'" class="loginXBtn">&times;</div>
+
+                    <div class="loginImg">
+                        <img src="../img/logos/logo-w.png" width="50px">
+                    </div>
+              
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+            
+                    <label for="pwd"><b>Password:</b></label>
+                    <input type="password" placeholder="Enter Password" name="pwd" required>
+                    
+                    <button class="loginBtn" type="submit">Login</button>
+                    <label><input type="checkbox" checked="checked" name="rememberMe"> Remember me</label>
+                    <span class="forgotPwd">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+          
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div class="fleetHeaderWrapper">
@@ -39,84 +61,43 @@
                 <div class="filterDrop">
                     <button class="filterBox">Brand &dtrif;</button>
                     <div class="filterContent">
-                        <label class="container">Honda
-                            <input type="checkbox" checked="checked" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Honda</label>
                         
-                        <label class="container">Nissan
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Nissan</label>
                         
-                        <label class="container">Hyundai
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Hyundai</label>
                         
-                        <label class="container">Mini
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Mini</label>
 
-                        <label class="container">BMW
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">BMW</label>
 
-                        <label class="container">Tesla
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Tesla</label>
                     </div>
                 </div>
                 <div class="filterDrop">
                     <button class="filterBox">Vehicle Type &dtrif;</button>
                     <div class="filterContent">
-                        <label class="container">Sedan
-                            <input type="checkbox" checked="checked" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Sedan</label>
                         
-                        <label class="container">Hatchback
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Hatchback</label>
                         
-                        <label class="container">SUV
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">SUV</label>
                         
-                        <label class="container">Sports
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
+                        <label><input type="checkbox" checked="checked">Sports
                         </label>
                     </div>
                 </div>
                 <div class="filterDrop">
                     <button class="filterBox">Category &dtrif;</button>
-                    <div class="filterContent">
-                        <label class="container">Economy
-                            <input type="checkbox" checked="checked" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                    <div class="filterContent categoryContent">
+                        <label><input type="checkbox" checked="checked">Economy</label>
                         
-                        <label class="container">Premium Economy
-                            <input type="checkbox" checked="checked" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Premium Economy</label>
                         
-                        <label class="container">Luxury/Sports
-                            <input type="checkbox" checked="checked" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                        <label><input type="checkbox" checked="checked">Luxury/Sports</label>
                     </div>
                 </div>
             </div>
-
-
-
 
         </div>
         
@@ -214,6 +195,7 @@
             </div>
         </footer>
 
+        <script src="../js/main.js"></script>
     </body>
 
 </html>

@@ -22,11 +22,33 @@
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
-                    <button class="loginBtn" type="button" onclick="openForm()">Login</button>
+                    <button class="navLoginBtn" type="button" onclick="document.getElementById('loginPopup').style.display='block'">Login</button>
                 </div>
             </div>
         </header>
-        
+
+        <div id="loginPopup" class="modalBg">
+            <form class="loginContent" action="/action_page.php" method="post">
+                <div class="loginContainer">
+                    <div onclick="document.getElementById('loginPopup').style.display='none'" class="loginXBtn">&times;</div>
+
+                    <div class="loginImg">
+                        <img src="img/logos/logo-w.png" width="50px">
+                    </div>
+              
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+            
+                    <label for="pwd"><b>Password:</b></label>
+                    <input type="password" placeholder="Enter Password" name="pwd" required>
+                    
+                    <button class="loginBtn" type="submit">Login</button>
+                    <label><input type="checkbox" checked="checked" name="rememberMe"> Remember me</label>
+                    <span class="forgotPwd">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div class="bannerLeft">
@@ -47,12 +69,12 @@
 
         <div class="logoContainer">
             <span>
-                <img src="img/logos/carBrands/honda.png">
-                <img src="img/logos/carBrands/nissan.png">
-                <img src="img/logos/carBrands/hyundai.png">
-                <img src="img/logos/carBrands/mini.png">
-                <img src="img/logos/carBrands/bmw.png">
-                <img src="img/logos/carBrands/tesla.png">
+                <a href="html/fleet.html"><img src="img/logos/carBrands/honda.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/nissan.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/hyundai.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/mini.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/bmw.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/tesla.png"></a>
             <span>
         </div><div class="clear"></div>
 
@@ -207,6 +229,7 @@
             </div>
         </footer>
 
+        <script src="js/main.js"></script>
     </body>
 
 </html>
