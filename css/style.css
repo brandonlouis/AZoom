@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-button {
+button, input[type=submit] {
     font-family: "Segoe UI", "Helvetica Neue";
     cursor: pointer;
     border: none;
@@ -182,7 +182,7 @@ footer {
     padding-top: 60px;
 }
 
-.loginContent {
+#loginContent {
     background-color: #242931;
     margin: 5% auto 15% auto;
     border-radius: 15px;
@@ -198,7 +198,13 @@ footer {
 
 .loginImg {
     text-align: center;
-    animation: spin 0.1s 0.2s backwards infinite;
+    animation: spin 2s 0.4s ease-in-out backwards infinite;
+}
+
+#invalidLoginContainer {
+    color: red; 
+    text-align: center;
+    display: none;
 }
 
 .loginXBtn { /* FIX DIV WIDTH CLICK ISSUE */
@@ -209,8 +215,7 @@ footer {
     margin-right: -25px;
 }
 
-/* Login button */
-.loginBtn {
+#loginBtn {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -624,10 +629,15 @@ footer {
 }
 
 @keyframes spin {
-    from {
+    0% {
         transform:rotate(0deg);
     }
-    to {
+
+    50% {
+        transform:rotate(180deg);
+    }
+
+    100% {
         transform:rotate(360deg);
     }
 }

@@ -28,26 +28,29 @@
         </header>
 
         <div id="loginPopup" class="modalBg">
-            <form class="loginContent" action="/action_page.php" method="post">
+            <form id="loginContent">
                 <div class="loginContainer">
                     <div onclick="document.getElementById('loginPopup').style.display='none'" class="loginXBtn">&times;</div>
 
                     <div class="loginImg">
                         <img src="../img/logos/logo-w.png" width="50px">
                     </div>
-              
+                    <div id="invalidLoginContainer">
+                        <p id="invalidLogin">Invalid username and/or password</p>
+                    </div>
+
                     <label for="username"><b>Username:</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <input type="text" name="username" id="usernameField" placeholder="Username">
             
                     <label for="pwd"><b>Password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="pwd" required>
-                    
-                    <button class="loginBtn" type="submit">Login</button>
-                    <label><input type="checkbox" checked="checked" name="rememberMe"> Remember me</label>
+                    <input type="password" name="password" id="passwordField" placeholder="Password">
+
+                    <input type="submit" value="Login" id="loginBtn" onclick="rememberMe()">
+                    <label><input type="checkbox" id="rememberMeCB" value="rememberMe"> Remember me</label>
                     <span class="forgotPwd">Forgot <a href="#">password?</a></span>
               </div>
             </form>
-          </div>
+        </div><div class="clear"></div>
           
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
