@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Our Fleet | AZoom Car Rental</title>
+        <link rel="icon" type="image/png" href="../img/logos/favicon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="rentProcessPage" onload="checkLogin()">
+        <header>
+            <div class="navContainer">
+                <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
+
+                <ul class="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+                <div class="navRight">
+                    <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
+                    <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
+                </div>
+            </div>
+        </header>
+
+        <div id="loginPopup" class="modalBg">
+            <form id="loginContent">
+                <div class="loginContainer">
+                    <div onclick="document.getElementById('loginPopup').style.display='none'" class="loginXBtn">&times;</div>
+
+                    <div class="loginImg">
+                        <img src="../img/logos/logo-w.png" width="50px">
+                    </div>
+                    <div id="invalidLoginContainer">
+                        <p id="invalidLogin">Invalid username and/or password</p>
+                    </div>
+
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" name="username" id="usernameField" placeholder="Username">
+            
+                    <label for="pwd"><b>Password:</b></label>
+                    <input type="password" name="password" id="passwordField" placeholder="Password">
+
+                    <input type="submit" value="Login" id="loginBtn" onclick="rememberMe()">
+                    <label><input type="checkbox" id="rememberMeCB" value="rememberMe"> Remember me</label>
+                    <span class="forgotPwd">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+        </div><div class="clear"></div>
+          
+        <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
+
+        <h1 class="bookingCarModel">Hyundai Kona 2019</h1>
+        <div class="rentalProcessContainer">
+            <div class="xrayContainer">
+                <div class="xrayCar">
+                    <div class="engineSpot"><span></span>
+                        <div class="engineBox">
+                            <p><strong>Engine Capacity:</strong> 64.0kWh Electric Engine</p>
+                            <p><strong>Driving Range:</strong> 484km</p>
+                            <p><strong>Efficiency:</strong> 15.4kWh/100km</p>
+                            <p><strong>Torque:</strong> 395Nm</p>
+                            <p><strong>Top Speed:</strong> 167km/h</p>
+                        </div>
+                      </div>
+    
+                      <div class="infotainmentSpot"><span></span>
+                        <div class="infotainmentBox">
+                            <p><strong>Bluetooth:</strong> Yes</p>
+                            <p><strong>GPS Navigation:</strong> Yes</p>
+                            <p><strong>Android Auto:</strong> Yes</p>
+                            <p><strong>Apple CarPlay:</strong> Yes</p>
+                        </div>
+                      </div>
+                  
+                      <div class="seatsSpot"><span></span>
+                        <div class="seatsBox">
+                            <p><strong>Seating Capacity:</strong> 5 people</p>
+                        </div>
+                      </div>
+    
+                      <div class="bootSpot"><span></span>
+                        <div class="bootBox">
+                            <p><strong>Boot Capacity:</strong> 332 litres</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+    
+            <div class="bookingFormContainer">
+                <form id="bookingForm">
+                    <h1>Personal Particulars</h1>
+
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+
+                    <label for="phone">Contact No.:</label>
+                    <input type="tel" id="phone" name="visitor_phone" placeholder="98765432" pattern="(6|8|9)\d{7}" required>
+                    
+                    <hr style="margin-top: 40px;">
+
+                    <h1>Rental Details</h1>
+                    <div class="rentalDetails">
+                        <div class="rentalDetailsLeft">
+                            <label for="pickUpDate">Pick-up Date:</label>
+                            <input type="date" id="pickUpDate" name="pickUpDate" required>
+                            
+                            <label for="pickUpTime">Pick-up Time:</label>
+                            <input type="time" id="pickUpTime" name="pickUpTime" required>
+                            
+                            <label for="pickUpLocation">Pick-up Location:</label>
+                            <select id="pickUpLocation" name="pickUpLocation" required>
+                                <option value="">Select Office</option>
+                                <option value="branchOrchard">Wheelock Place (Orchard)</option>
+                                <option value="branchEsplanade">Marina Square (Esplanade)</option>
+                            </select>
+                        </div>
+                        <div class="rentalDetailsRight">
+                            <label for="returnDate">Return Date:</label>
+                            <input type="date" id="returnDate" name="returnDate" required>
+                            
+                            <label for="returnTime">Return Time:</label>
+                            <input type="time" id="returnTime" name="returnTime" required>
+                            
+                            <label for="returnLocation">Return Location:</label>
+                            <select id="returnLocation" name="returnLocation" required>
+                                <option value="">Select Carpark</option>
+                                <option value="carparkAP">Angullia Park (Orchard)</option>
+                                <option value="carparkMW">Millenia Walk (Esplanade)</option>
+                                <option value="carparkGW">Great World (River Valley)</option>
+                                <option value="carparkKallang">Kallang Leisure Park (Stadium)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="proceedResBtn">Proceed to Reservation</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
+
+        <footer>
+            <div class="footerContainer">
+                <span class="footerLeft">
+                    <a href="../index.html"><img src="../img/logos/fullLogo-w.png" width="150px"></a>
+                </span>
+
+                <span class="footerMiddle">
+                    <span>
+                        <a href="https://www.facebook.com/"><img class="footerIcons" src="../img/icons/facebook.png"></a>
+                        <a href="https://www.instagram.com/"><img class="footerIcons" src="../img/icons/instagram.png"></a>
+                        <a href="https://www.twitter.com/"><img class="footerIcons" src="../img/icons/twitter.png"></a>
+                    </span>
+                </span>
+
+                <span class="footerRight">
+                    <span>
+                        <p>Contact us:</p>
+                        <p>hello@azoom.com</p>
+                        <p>+65 9123 4567</p>
+                    </span>
+                </span>
+            </div>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+
+</html>

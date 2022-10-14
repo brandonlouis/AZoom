@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-button, input[type=submit] { /* Buttons */
+button, input[type=submit] { /* Buttons */ 
     font-family: "Segoe UI", "Helvetica Neue";
     cursor: pointer;
     border: none;
@@ -24,14 +24,13 @@ button, input[type=submit] { /* Buttons */
 }
 
 
-input[type=text], input[type=search], input[type=password], input[type=email] { /* Textfields */
+input:not(input[type=submit], input[type=checkbox]), select { /* Textfields */
     font-family: "Segoe UI", "Helvetica Neue";
     width: 100%;
     padding: 8px 12px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid white;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
     border-radius: 6px;
@@ -39,21 +38,21 @@ input[type=text], input[type=search], input[type=password], input[type=email] { 
     color:white;
     font-size: 16px;
 }
-input[type=text]:focus, input[type=search]:focus, input[type=password]:focus, input[type=email]:focus {
+input:focus:not(input[type=submit], input[type=checkbox]), select:focus { /* Focus animation */
     box-shadow: 0 0 7px #3671ca;
     padding: 8px 12px;
     margin: 8px 0;
     border: 1px solid #3671ca;
 }
 
-.sectionTitle {
+h1, .bannerFleetLink{
+    color: #ffc107;
     font-size: 20px;
     font-weight: 600;
-    color: #ffc107;
     animation: hFadeIn 2s ease-out;
 }
 
-.sectionSubTitle {
+h2 {
     color: white;
     font-size: 50px;
     font-weight: 600;
@@ -61,7 +60,7 @@ input[type=text]:focus, input[type=search]:focus, input[type=password]:focus, in
     animation: hFadeIn 2s ease-out;
 }
 
-.sectionText {
+p {
     margin-top: -1em;
     font-size: 20px;
     color: rgb(190, 190, 190);
@@ -164,6 +163,9 @@ footer {
     color: white;
 }
 
+.footerRight p {
+    all: revert;
+}
 
 
 
@@ -249,10 +251,9 @@ footer {
     font-weight: 600;
     margin-bottom: 5%;
     margin-top: 0%;
-    animation: hFadeIn 2s ease-out;
 }
 
-.bannerLeft .sectionText {
+.bannerLeft p {
     margin-top: 0;
 }
 
@@ -261,7 +262,7 @@ footer {
     animation: hFadeIn 2s ease-out;
 }
 
-.bannerLeft .sectionTitle {
+.bannerLeft .bannerFleetLink {
     color: white;
     margin-left: 50px;
 }
@@ -374,15 +375,15 @@ footer {
     text-align: center;
 }
 
-.whyUsTop .sectionTitle {
+.whyUsTop h1 {
     text-shadow: 0 0 20px rgb(0 0 0 / 0.3);
 }
 
-.whyUsTop .sectionSubTitle {
+.whyUsTop h2 {
     color: black;
 }
 
-.whyUsTop .sectionText {
+.whyUsTop p {
     color: rgb(90, 90, 90);
 }
 
@@ -396,6 +397,10 @@ footer {
     text-align: left;
 }
 
+.whyUsBtm h2 {
+    all: revert;
+}
+
 .whyUsBox {
     margin: 2%;
     background-color: #2d333d;
@@ -405,6 +410,7 @@ footer {
 }
 
 .whyUsBox p {
+    all: revert;
     font-size: 20px;
 }
 
@@ -438,6 +444,7 @@ footer {
 }
 
 .fleetItem h1 {
+    all: revert;
     margin: -25px 0 0;
 }
 
@@ -453,6 +460,7 @@ footer {
 }
 
 .fleetItem h2 {
+    all: revert;
     font-weight: 400;
 }
 
@@ -492,7 +500,7 @@ footer {
 
 /* Text and button */
 .newsletterContainer input {
-    width: 70%
+    width: 70% !important;
 }
 
 .newsletterBtn {
@@ -508,7 +516,6 @@ footer {
 /* FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML */
 .fleetHeaderWrapper {
     margin: 2% 10% 0;
-    width: 80%;
     display: flex;
     align-items: center;
 }
@@ -523,6 +530,10 @@ footer {
     color: white;
     text-align: left;
     width: 35%;
+}
+
+.fleetPage .fleetTitle h1 {
+    all: revert;
 }
 
 /* Filters */
@@ -581,6 +592,132 @@ footer {
 
 .filterDrop:hover .filterBox {
     background-color: #1f242b;
+}
+
+
+
+
+
+/* RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML */
+.bookingCarModel {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.rentalProcessContainer {
+    margin: 0 10% 10%;
+    display: flex;
+}
+
+.xrayContainer {
+    width: 50%;
+}
+
+.xrayContainer p {
+    all: revert;
+}
+
+.xrayCar {
+    background-image: url('/img/cars/xray/konaXray.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    width: 380px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Engine Spot  */
+.engineSpot { /* Spot coordinates */
+    position: absolute;
+    left: 177px;
+    top: 100px;
+}
+
+/* Infotainment Spot  */
+.infotainmentSpot {
+    position: absolute;
+    left: 177px;
+    top: 300px;
+}
+
+/* Seats Spot  */
+.seatsSpot {
+    position: absolute;
+    left: 177px;
+    top: 470px;
+}
+
+/* Boot Spot  */
+.bootSpot {
+    position: absolute;
+    left: 177px;
+    top: 730px;
+}
+
+.engineSpot span, .infotainmentSpot span, .seatsSpot span, .bootSpot span { /* Spot design */
+    border: 3px solid #ffc107;
+    border-radius: 50px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-self: center;
+}
+
+.engineSpot:hover span, .infotainmentSpot:hover span, .seatsSpot:hover span, .bootSpot:hover span { /* Spot hover effect */
+    box-shadow: 0 0 100px 30px #fff, 0 0 40px 10px #cc9900;
+}
+
+.engineBox, .infotainmentBox, .seatsBox, .bootBox { /* Hide textbox */
+    display: none;
+}
+.engineSpot:hover .engineBox, .infotainmentSpot:hover .infotainmentBox, .seatsSpot:hover .seatsBox, .bootSpot:hover .bootBox { /* Show textbox */
+    display: inline-block;
+    background: black;
+    color: white;
+    position: relative;
+    left: 20px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    min-width: 200px;
+}
+
+
+/* Booking form */
+.bookingFormContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#bookingForm {
+    color: white;
+}
+
+/* Rental details section */
+.rentalDetails {
+    width: 100%;
+    display: flex;
+}
+
+.rentalDetailsLeft {
+    display: grid;
+    width: 45%;
+    padding-right: 10%;
+}
+
+.rentalDetailsRight {
+    display: grid;
+    width: 45%;
+}
+
+.proceedResBtn {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 50px;
 }
 
 
