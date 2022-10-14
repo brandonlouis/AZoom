@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-button, input[type=submit] {
+button, input[type=submit] { /* Buttons */
     font-family: "Segoe UI", "Helvetica Neue";
     cursor: pointer;
     border: none;
@@ -24,7 +24,7 @@ button, input[type=submit] {
 }
 
 
-input[type=text], input[type=search], input[type=password], input[type=email] {
+input[type=text], input[type=search], input[type=password], input[type=email] { /* Textfields */
     font-family: "Segoe UI", "Helvetica Neue";
     width: 100%;
     padding: 8px 12px;
@@ -120,7 +120,7 @@ li a {
     margin-top: 22px;
 }
 
-.navLoginBtn {
+#navLoginBtn {
     padding: 8px 13px;
     margin: 9px 0 9px 15px;
     font-size: 16px;
@@ -561,10 +561,6 @@ footer {
     padding: 10px 0;
 }
 
-.categoryContent { /* To accommodate category's longer texts */
-    min-width: 220px;
-}
-
 .filterContent label {
     cursor: pointer;
     padding: 12px 25px;
@@ -579,6 +575,8 @@ footer {
 
 .filterDrop:hover .filterContent {
     display: block;
+    animation: dropDownMenu 0.3s ease-in-out forwards;
+    transform-origin: top center;
 }
 
 .filterDrop:hover .filterBox {
@@ -639,5 +637,17 @@ footer {
 
     100% {
         transform:rotate(360deg);
+    }
+}
+
+@keyframes dropDownMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
     }
 }

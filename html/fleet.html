@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
 
-    <body class="fleetPage">
+    <body class="fleetPage" onload="checkLogin()">
         <header>
             <div class="navContainer">
                 <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
@@ -22,7 +22,7 @@
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
-                    <button class="navLoginBtn" type="button" onclick="document.getElementById('loginPopup').style.display='block'">Login</button>
+                    <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
                 </div>
             </div>
         </header>
@@ -92,7 +92,7 @@
                 </div>
                 <div class="filterDrop">
                     <button class="filterBox">Category &dtrif;</button>
-                    <div class="filterContent categoryContent">
+                    <div class="filterContent" style="min-width: 220px;">
                         <label><input type="checkbox" checked="checked">Economy</label>
                         
                         <label><input type="checkbox" checked="checked">Premium Economy</label>
