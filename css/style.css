@@ -172,7 +172,7 @@ footer {
 
 /* LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  */
 /* Darken background */
-.modalBg {
+.modalBg, #successPage {
     display: none;
     position: fixed;
     z-index: 1;
@@ -184,7 +184,7 @@ footer {
     padding-top: 60px;
 }
 
-#loginContent {
+#loginContent, #creditCardContent {
     background-color: #242931;
     margin: 5% auto 15% auto;
     border-radius: 15px;
@@ -217,8 +217,7 @@ footer {
     margin-right: -25px;
 }
 
-#loginBtn {
-    width: 100%;
+#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn {
     margin-bottom: 20px;
 }
 
@@ -464,12 +463,12 @@ footer {
     font-weight: 400;
 }
 
-.carRentBtn {
-    width:100%;
+#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn { /* Full width buttons */
+    width: 100%;
 }
 
 /* See fleet button */
-.fullFleet {
+.fullFleet { /* Container */
     width: 100%;
     text-align: center;
 }
@@ -599,7 +598,7 @@ footer {
 
 
 /* RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML */
-.bookingCarModel {
+.bookingCarModelName {
     font-size: 30px;
     text-align: center;
     margin-top: 5%;
@@ -715,10 +714,79 @@ footer {
 }
 
 .proceedResBtn {
-    width: 100%;
     padding: 10px 0;
     margin-top: 50px;
 }
+
+
+/* Credit card info section */
+#creditCardContent {
+    width: 500px;
+}
+
+#creditCardPopup h1 {
+    padding: 40px 0 10px;
+}
+
+.creditCardOwner {
+    width: 63%;
+    margin-right: 10px;
+}
+.creditCardCVV {
+    width: 35%;
+}
+
+.creditCardExpiration {
+    display: flex;
+}
+
+.creditCardExpiration select {
+    padding: 10px;
+    margin-right: 12px;
+    width: auto;
+}
+
+.creditCardImg {
+    display: flex;
+    align-items: center;
+    margin-left: 95px;
+}
+
+.creditCardImg img {
+    margin-left: 10px;
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+
+/* Success page */
+#successPage {
+    background-color: #2d333d;
+    padding-top: 0;
+}
+
+.messageContainer {
+    margin: auto auto;
+    width: 800px;
+    text-align: center;
+}
+
+.messageContainer p {
+    margin-top: inherit;
+}
+
+
+/* Confetti */
+/* #canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+
 
 
 
