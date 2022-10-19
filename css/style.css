@@ -790,9 +790,34 @@ footer {
 
 
 
-/* ABOUT.HTML ABOUT.HTML ABOUT.HTML ABOUT.HTML ABOUT.HTML ABOUT.HTML ABOUT.HTML ABOUT.HTML */
-.aboutContainer {
-    margin: 5% 10% 10%;
+/* HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML */
+/* Locations (Office + Carpark) section */
+.locationContainer {
+    margin: 2%;
+    display: flex;
+    text-align: center;
+}
+
+.officeLoc, .carparkLoc {
+    width: 48%;
+}
+
+.carparkLoc {
+    margin-left: 4%;
+}
+
+
+/* Step by step section */
+.stepsContainer {
+    margin: 0 20%;
+    display: flex;
+}
+
+.pickupSteps {
+    text-align: right;
+}
+.returnSteps {
+    text-align: left;
 }
 
 

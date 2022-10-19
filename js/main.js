@@ -135,7 +135,7 @@ document.getElementById("creditCardContent").addEventListener("submit", (e) => {
         var downloadTimer = setInterval(function(){
             if(timeleft < 0){
                 clearInterval(downloadTimer);
-                window.location.href = "../html/about.html";
+                window.location.href = "../html/howto.html";
             } else {
                 document.getElementById("redirectCD").innerHTML = timeleft;
             }
