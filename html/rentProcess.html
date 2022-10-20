@@ -52,93 +52,99 @@
           
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <h1 class="bookingCarModelName animateOnScroll">Hyundai Kona 2019</h1>
-        <div class="rentalProcessContainer">
-            <div class="xrayContainer">
-                <div class="xrayCar animateOnScroll">
-                    <div class="engineSpot"><span></span>
-                        <div class="engineBox">
-                            <p><strong>Engine Capacity:</strong> 64.0kWh Electric Engine</p>
-                            <p><strong>Driving Range:</strong> 484km</p>
-                            <p><strong>Efficiency:</strong> 15.4kWh/100km</p>
-                            <p><strong>Torque:</strong> 395Nm</p>
-                            <p><strong>Top Speed:</strong> 167km/h</p>
-                        </div>
-                      </div>
-    
-                      <div class="infotainmentSpot"><span></span>
-                        <div class="infotainmentBox">
-                            <p><strong>Bluetooth:</strong> Yes</p>
-                            <p><strong>GPS Navigation:</strong> Yes</p>
-                            <p><strong>Android Auto:</strong> Yes</p>
-                            <p><strong>Apple CarPlay:</strong> Yes</p>
-                        </div>
-                      </div>
-                  
-                      <div class="seatsSpot"><span></span>
-                        <div class="seatsBox">
-                            <p><strong>Seating Capacity:</strong> 5 people</p>
-                        </div>
-                      </div>
-    
-                      <div class="bootSpot"><span></span>
-                        <div class="bootBox">
-                            <p><strong>Boot Capacity:</strong> 332 litres</p>
-                        </div>
-                      </div>
-                </div>
+        <div class="contentContainer">
+            <div class="titleContainer animateOnScroll">
+                <h1>Reservation</h1>
+                <h2>Hyundai Kona 2019</h2>
             </div>
-    
-            <div class="bookingFormContainer animateOnScroll">
-                <form id="bookingForm">
-                    <h1>Personal Particulars</h1>
-
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" placeholder="John Doe" pattern="[A-Z\sa-z]{3,20}" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="john.doe@email.com" required>
-
-                    <label for="phone">Contact No.:</label>
-                    <input type="tel" id="phone" placeholder="98765432" pattern="(6|8|9)\d{7}" required>
-                    
-                    <hr style="margin-top: 40px;">
-
-                    <h1>Rental Details</h1>
-                    <div class="rentalDetails">
-                        <div class="rentalDetailsLeft">
-                            <label for="pickUpDate">Pick-up Date:</label>
-                            <input type="date" id="pickUpDate" name="pickUpDate" required>
-                            
-                            <label for="pickUpTime">Pick-up Time:</label>
-                            <input type="time" id="pickUpTime" name="pickUpTime" required>
-                            
-                            <label for="pickUpLocation">Pick-up Location:</label>
-                            <select id="pickUpLocation" name="pickUpLocation" required>
-                                <option value="">Select Office</option>
-                                <option value="branchOrchard">Wheelock Place (Orchard)</option>
-                                <option value="branchEsplanade">Marina Square (Esplanade)</option>
-                            </select>
-                        </div>
-                        <div class="rentalDetailsRight">
-                            <label for="returnDate">Return Date:</label>
-                            <input type="date" id="returnDate" name="returnDate" required>
-                            
-                            <label for="returnTime">Return Time:</label>
-                            <input type="time" id="returnTime" name="returnTime" required>
-                            
-                            <label for="returnLocation">Return Location:</label>
-                            <select id="returnLocation" name="returnLocation" required>
-                                <option value="">Select Carpark</option>
-                                <option value="carparkAP">Angullia Park (Orchard)</option>
-                                <option value="carparkMW">Millenia Walk (Esplanade)</option>
-                                <option value="carparkGW">Great World (River Valley)</option>
-                                <option value="carparkKallang">Leisure Park Kallang (Stadium)</option>
-                            </select>
-                        </div>
+            
+            <div class="reservationContainer">
+                <div class="xrayContainer animateOnScroll">
+                    <div class="xrayCar">
+                        <div class="engineSpot"><span></span>
+                            <div class="engineBox">
+                                <p><strong>Engine Capacity:</strong> 64.0kWh Electric Engine</p>
+                                <p><strong>Driving Range:</strong> 484km</p>
+                                <p><strong>Efficiency:</strong> 15.4kWh/100km</p>
+                                <p><strong>Torque:</strong> 395Nm</p>
+                                <p><strong>Top Speed:</strong> 167km/h</p>
+                            </div>
+                          </div>
+        
+                          <div class="infotainmentSpot"><span></span>
+                            <div class="infotainmentBox">
+                                <p><strong>Bluetooth:</strong> Yes</p>
+                                <p><strong>GPS Navigation:</strong> Yes</p>
+                                <p><strong>Android Auto:</strong> Yes</p>
+                                <p><strong>Apple CarPlay:</strong> Yes</p>
+                            </div>
+                          </div>
+                      
+                          <div class="seatsSpot"><span></span>
+                            <div class="seatsBox">
+                                <p><strong>Seating Capacity:</strong> 5 people</p>
+                            </div>
+                          </div>
+        
+                          <div class="bootSpot"><span></span>
+                            <div class="bootBox">
+                                <p><strong>Boot Capacity:</strong> 332 litres</p>
+                            </div>
+                          </div>
                     </div>
-                    <button class="proceedResBtn">Proceed to reservation</button>
-                </form>
+                </div>
+        
+                <div class="bookingFormContainer animateOnScroll">
+                    <form id="bookingForm">
+                        <h1>Personal Particulars</h1>
+    
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" placeholder="John Doe" pattern="[A-Z\sa-z]{3,20}" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="john.doe@email.com" required>
+    
+                        <label for="phone">Contact No.:</label>
+                        <input type="tel" id="phone" placeholder="98765432" pattern="(6|8|9)\d{7}" required>
+                        
+                        <hr style="margin-top: 40px;">
+    
+                        <h1>Rental Details</h1>
+                        <div class="rentalDetails">
+                            <div class="rentalDetailsLeft">
+                                <label for="pickUpDate">Pick-up Date:</label>
+                                <input type="date" id="pickUpDate" name="pickUpDate" required>
+                                
+                                <label for="pickUpTime">Pick-up Time:</label>
+                                <input type="time" id="pickUpTime" name="pickUpTime" required>
+                                
+                                <label for="pickUpLocation">Pick-up Location:</label>
+                                <select id="pickUpLocation" name="pickUpLocation" required>
+                                    <option value="">Select Office</option>
+                                    <option value="branchOrchard">Wheelock Place (Orchard)</option>
+                                    <option value="branchEsplanade">Marina Square (Esplanade)</option>
+                                </select>
+                            </div>
+                            <div class="rentalDetailsRight">
+                                <label for="returnDate">Return Date:</label>
+                                <input type="date" id="returnDate" name="returnDate" required>
+                                
+                                <label for="returnTime">Return Time:</label>
+                                <input type="time" id="returnTime" name="returnTime" required>
+                                
+                                <label for="returnLocation">Return Location:</label>
+                                <select id="returnLocation" name="returnLocation" required>
+                                    <option value="">Select Carpark</option>
+                                    <option value="carparkAP">Angullia Park (Orchard)</option>
+                                    <option value="carparkMW">Millenia Walk (Esplanade)</option>
+                                    <option value="carparkGW">Great World (River Valley)</option>
+                                    <option value="carparkKallang">Leisure Park Kallang (Stadium)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="proceedResBtn">Continue</button>
+                    </form>
+                </div>
             </div>
         </div><div class="clear"></div>
         
@@ -202,7 +208,7 @@
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div id="successPage">
-            <div class="messageContainer">
+            <div class="messageContainer animateOnScroll">
                 <h2>Reservation successful!</h2>
                 <h1>Thank you for choosing AZoom!</h1>
                 <p>We have sent you an email confirmation.</p>

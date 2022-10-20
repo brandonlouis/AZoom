@@ -1,3 +1,5 @@
+/* Colors: #ffc107 (Base orange), #eca216 (Dark orange), #2d333d (Base background), #242931 (Dark background) */
+
 /* General */
 .clear { clear:both; }
 
@@ -22,7 +24,14 @@ button, input[type=submit] { /* Buttons */
     padding: 12px 0;
     margin-top: 5%;
 }
+button:hover, input[type=submit]:hover {
+    background-color: #eca216;
+    transition: 0.2s;
+}
 
+#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn { /* Full width buttons */
+    width: 100%;
+}
 
 input:not(input[type=submit], input[type=checkbox]), select { /* Textfields */
     font-family: "Segoe UI", "Helvetica Neue";
@@ -64,8 +73,25 @@ p {
     color: rgb(190, 190, 190);
 }
 
+img {
+    border-radius: 6px;
+}
+
+.contentContainer {
+    margin: 2% 10% 10%;
+}
+
+.titleContainer {
+    text-align: center;
+}
+
 .animateScrollUp {
     animation: hFadeIn 2s 0.1s ease-out backwards;
+}
+
+/* Revert styles*/
+.footerRight p, .whyUsBtm h2, .whyUsBox p, .fleetItem h1, .fleetItem h2, .fleetPage .fleetTitle h1, .xrayContainer p {
+    all: revert;
 }
 
 
@@ -109,7 +135,7 @@ li a {
 }
 
 .navActive {
-    color: #f9ac43;
+    color: #eca216;
 }
 
 /* Right navbar elements (Login and Searchbox) */
@@ -163,9 +189,6 @@ footer {
     color: white;
 }
 
-.footerRight p {
-    all: revert;
-}
 
 
 
@@ -217,7 +240,7 @@ footer {
     margin-right: -25px;
 }
 
-#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn {
+#loginBtn, .confirmResBtn {
     margin-bottom: 20px;
 }
 
@@ -249,7 +272,7 @@ footer {
     font-size: 65px;
     font-weight: 600;
     margin-bottom: 5%;
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 .bannerLeft p {
@@ -325,6 +348,7 @@ footer {
 
 .aboutLeft img {
     vertical-align: middle;
+    border-radius: 6px;
 }
 
 /* Title and button */
@@ -339,10 +363,6 @@ footer {
 
 .aboutRight span {
     margin-left: 60px;
-}
-
-.aboutRight h2 {
-    color: white;
 }
 
 .aboutBtn {
@@ -379,67 +399,70 @@ footer {
 }
 
 .whyUsTop p {
-    color: rgb(90, 90, 90);
+    color: rgb(100, 100, 100);
 }
 
-/* Boxes */
+/* Boxes section */
 .whyUsBtm {
-    color:white;
-    display: flex;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, #2d333d 50%);
 }
 
 .whyUsBtm span {
+    color:white;
     text-align: left;
 }
 
-.whyUsBtm h2 {
-    all: revert;
+.whyUsBtmWrapper {
+    display: flex;
+    margin: 0 10%;
+    justify-content: center;
 }
 
 .whyUsBox {
+    width: 100%;
     margin: 2%;
     background-color: #2d333d;
     padding: 30px;
     border-top: 8px solid #ffc107;
+    border-radius: 10px;
     box-shadow: 0 20px 50px rgb(0 0 0 / 0.1);
 }
 
 .whyUsBox p {
-    all: revert;
     font-size: 20px;
 }
 
-
-/* Fleet section */
-/* Title */
-.fleetTitle {
-    margin-top: 300px;
-    text-align: center;
+/* Index.html Fleet secton */
+.indexPage .contentContainer {
+    margin-top: 8%;
 }
 
+/* For all fleet grid displays */
 /* Cars */
 .fleetContainer {
-    margin: 0 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .fleetItem {
     margin: 3%;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 20px 50px rgb(0 0 0 / 0.2);
-    color: white;
+    border-radius: 12px;
+    background-color: #e3e3e3;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .fleetItem p {
     margin: 15px 0 0;
-    color: #cc9900;
-    font-size: 14px;
+    color: #eca216;
+    font-size: 15px;
     text-align: right;
 }
 
 .fleetItem h1 {
-    all: revert;
     margin: -25px 0 0;
 }
 
@@ -449,18 +472,17 @@ footer {
 
 .fleetItem h1::after {
     content: " /day";
-    color: rgb(150, 150, 150);
+    color: rgb(100, 100, 100);
     font-weight: 100;
     font-size: 25px;
 }
 
 .fleetItem h2 {
-    all: revert;
     font-weight: 400;
 }
 
-#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn { /* Full width buttons */
-    width: 100%;
+.carRentBtn {
+    margin-top: 2%;
 }
 
 /* See fleet button */
@@ -470,14 +492,12 @@ footer {
 }
 
 .fullFleet button {
-    width: 15%;
-    margin-top: 4%;
+    width: 20%;
 }
 
 
 /* Newsletter section */
 .newsletterFalseFooter {
-    margin-top: 8%;
     background: linear-gradient(to bottom, #2d333d 50%, #242931 50%);
     width: 100%;
     text-align: center;
@@ -510,25 +530,15 @@ footer {
 
 /* FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML */
 .fleetHeaderWrapper {
-    margin: 2% 10% 0;
     display: flex;
     align-items: center;
 }
 
-.fleetPage .fleetContainer {
-    margin-bottom: 10%;
-}
-
 /* Title */
 .fleetPage .fleetTitle {
-    margin-top: 0;
     color: white;
     text-align: left;
     width: 35%;
-}
-
-.fleetPage .fleetTitle h1 {
-    all: revert;
 }
 
 /* Filters */
@@ -594,23 +604,12 @@ footer {
 
 
 /* RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML */
-.bookingCarModelName {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.rentalProcessContainer {
-    margin: 0 10% 10%;
+.reservationContainer {
     display: flex;
 }
 
 .xrayContainer {
-    width: 50%;
-}
-
-.xrayContainer p {
-    all: revert;
+    width: 40%;
 }
 
 .xrayCar {
@@ -621,7 +620,8 @@ footer {
     display: flex;
     width: 380px;
     height: 800px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 0;
     position: relative;
 }
 
@@ -663,7 +663,9 @@ footer {
 }
 
 .engineSpot:hover span, .infotainmentSpot:hover span, .seatsSpot:hover span, .bootSpot:hover span { /* Spot hover effect */
-    box-shadow: 0 0 100px 30px #fff, 0 0 40px 10px #cc9900;
+    box-shadow: 0 0 40px 10px #cc9900;
+    transform: scale(1.5);
+    transition: 0.2s;
 }
 
 .engineBox, .infotainmentBox, .seatsBox, .bootBox { /* Hide textbox */
@@ -686,13 +688,21 @@ footer {
 
 /* Booking form */
 .bookingFormContainer {
-    width: 50%;
+    width: 60%;
     display: flex;
     align-items: center;
+    margin-left: 5%;
 }
 
 #bookingForm {
     color: white;
+    padding: 30px;
+    background-color: #1f242b;
+    border-radius: 10px;
+}
+
+#bookingForm h1 {
+    margin-top: 0;
 }
 
 /* Rental details section */
@@ -764,6 +774,7 @@ footer {
 #successPage {
     background-color: #2d333d;
     padding-top: 0;
+    animation: animatePopup 0.6s
 }
 
 .messageContainer {
@@ -793,44 +804,49 @@ footer {
 
 
 /* HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML */
-/* Locations (Office + Carpark) section */
-.locationContainer {
-    margin: 2%;
+.pickUpContainer, .returnContainer {
+    width: 90%;
+    background-color: #1c2026;
+    border-radius: 10px;
+    padding: 5%;
     display: flex;
-    text-align: center;
+    align-items: center;
 }
 
-.officeLoc, .carparkLoc {
-    width: 48%;
+/* Pickup instructions section */
+.howToImg {
+    width: 65%;
+}
+.howToImg h1 {
+    margin-top: 0;
 }
 
-.carparkLoc {
-    margin-left: 4%;
+.howToSteps {
+    margin-left: 5%;
+    width: 30%;
+}
+.howToSteps h2 {
+    margin-bottom: 20px;
 }
 
-
-/* Step by step section */
-.stepsContainer {
-    margin: 0 10% 10%;
-    display: flex;
-    text-align: center;
+/* Return instructions section */
+.returnContainer {
+    margin-top: 5%;
 }
 
-.pickupSteps {
-    width: 40%
-}
-.returnSteps {
-    width: 40%;
-    margin-left: auto;
-    margin-right: 0;
+.returnContainer .howToImg {
+    margin-left: 5%;
 }
 
+.returnContainer .howToSteps {
+    margin: 0;
+}
 
 
 
 
 /* ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS */
-@keyframes flyInRight { /* For index.html banner */
+@keyframes flyInRight { /* For index.html banner's Honda E */
     0% { transform: translateX(100%); }
 
     100% { transform: translateX(0); }
@@ -860,11 +876,11 @@ footer {
 }
 
 @keyframes animatePopup { /* For login and credit card */
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
+    from {transform: translateY(-150%)} 
+    to {transform: translateY(0)}
 }
 
-@keyframes spin { /* AZoon logo loading animation (currently only for redirecting screen) */
+@keyframes spin { /* AZoom logo loading animation (currently only for redirecting screen) */
     0% {
         transform:rotate(0deg);
     }
