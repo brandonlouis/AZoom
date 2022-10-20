@@ -10,14 +10,13 @@
 
     <body class="fleetPage" onload="checkLogin()">
         <header>
-            <div class="navContainer">
+            <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
                 <ul class="navLinks">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="fleet.html" class="navActive">Our Fleet</a></li>
                     <li><a href="howto.html">How-to</a></li>
-                    <li><a href="about.html">About</a></li>
                 </ul>
 
                 <div class="navRight">
@@ -35,9 +34,8 @@
                     <div class="loginImg">
                         <img src="../img/logos/logo-w.png" width="50px">
                     </div>
-                    <div id="invalidLoginContainer">
-                        <p id="invalidLogin">Invalid username and/or password</p>
-                    </div>
+                    
+                    <p id="invalidLogin">Invalid username and/or password</p>
 
                     <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
@@ -54,7 +52,7 @@
           
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="fleetHeaderWrapper">
+        <div class="fleetHeaderWrapper animateOnScroll">
             <div class="fleetTitle">
                 <h1>Our Fleet</h1>
                 <p class="sectionText">Explore the cars you might like!</p>
@@ -106,7 +104,7 @@
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
         
         <div class="fleetContainer">                
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/nissanLeaf.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 65</h1>
@@ -114,7 +112,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/hyundaiIoniq.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 68</h1>
@@ -122,7 +120,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/hondaE.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 75</h1>
@@ -130,7 +128,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/hyundaiKona.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 77</h1>
@@ -138,7 +136,7 @@
                 <button class="carRentBtn" type="button" onclick="location.href='rentProcess.html'">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/bmwI3.png" width="100%">
                 <p>Premium Economy</p>
                 <h1>$ 84</h1>
@@ -146,7 +144,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/miniElectric.png" width="100%">
                 <p>Premium Economy</p>
                 <h1>$ 115</h1>
@@ -155,7 +153,7 @@
             </span>
 
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/tesla3.png" width="100%">
                 <p>Luxury/Sports</p>
                 <h1>$ 132</h1>
@@ -163,7 +161,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </span>
 
-            <span class="fleetItem">
+            <span class="fleetItem animateOnScroll">
                 <img src="../img/cars/thumbnails/bmwi4.png" width="100%">
                 <p>Luxury/Sports</p>
                 <h1>$ 151</h1>

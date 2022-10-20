@@ -10,14 +10,13 @@
 
     <body class="rentProcessPage" onload="checkLogin()">
         <header>
-            <div class="navContainer">
+            <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
                 <ul class="navLinks">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="fleet.html" class="navActive">Our Fleet</a></li>
                     <li><a href="howto.html">How-to</a></li>
-                    <li><a href="about.html">About</a></li>
                 </ul>
 
                 <div class="navRight">
@@ -35,9 +34,8 @@
                     <div class="loginImg">
                         <img src="../img/logos/logo-w.png" width="50px">
                     </div>
-                    <div id="invalidLoginContainer">
-                        <p id="invalidLogin">Invalid username and/or password</p>
-                    </div>
+                    
+                    <p id="invalidLogin">Invalid username and/or password</p>
 
                     <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
@@ -54,10 +52,10 @@
           
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <h1 class="bookingCarModelName">Hyundai Kona 2019</h1>
+        <h1 class="bookingCarModelName animateOnScroll">Hyundai Kona 2019</h1>
         <div class="rentalProcessContainer">
             <div class="xrayContainer">
-                <div class="xrayCar">
+                <div class="xrayCar animateOnScroll">
                     <div class="engineSpot"><span></span>
                         <div class="engineBox">
                             <p><strong>Engine Capacity:</strong> 64.0kWh Electric Engine</p>
@@ -91,7 +89,7 @@
                 </div>
             </div>
     
-            <div class="bookingFormContainer">
+            <div class="bookingFormContainer animateOnScroll">
                 <form id="bookingForm">
                     <h1>Personal Particulars</h1>
 
@@ -211,10 +209,12 @@
                 </br>
                 <p>You will receive an SMS reminder 1 day before your scheduled pickup time, followed by another 1 hour before.</p>
                 </br></br>
+                <img class="redirectLogo" src="../img/logos/logo-w.png" width="50px">
+                </br></br>
                 <p>You will be redirected in <strong id="redirectCD">10</strong> seconds.</p>
             </div>
             <!-- <canvas id="canvas"></canvas> -->
-        </div>
+        </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 

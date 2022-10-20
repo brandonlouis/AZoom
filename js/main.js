@@ -1,3 +1,20 @@
+const observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('animateScrollUp');
+        observer.unobserve(entry.target); // Stops observing to preserve memory
+      }
+    });
+  });
+  
+  document.querySelectorAll('.animateOnScroll').forEach(element => {
+    observer.observe(element);
+  });
+
+
 // Login popup; Closes form when user clicks outside of it.
 window.onclick = function closeModal(event) {
     if (event.target == document.getElementById("loginPopup")) {
@@ -15,14 +32,14 @@ document.getElementById("loginBtn").addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "Bob" && password === "123") {
+    if (username === "Bob" && password === "123") { // Username and password
         alert("Welcome "+ username + ", you have successfully logged in.");
         document.cookie = "username=" + username + "; path=/"; // Sets path to be default, allows deleting of this cookie from any pages
         document.getElementById("loginPopup").style.display = "none";
         location.reload();
     } else {
         e.preventDefault();
-        document.getElementById("invalidLoginContainer").style.display = "block";
+        document.getElementById("invalidLogin").style.display = "block";
     }
 })
 
@@ -144,6 +161,11 @@ document.getElementById("creditCardContent").addEventListener("submit", (e) => {
     }
     
 })
+
+
+
+
+
 
 
 // canvas = document.getElementById("canvas");

@@ -10,14 +10,13 @@
 
     <body class="howToPage" onload="checkLogin()">
         <header>
-            <div class="navContainer">
+            <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
                 <ul class="navLinks">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
                     <li><a href="howto.html" class="navActive">How-to</a></li>
-                    <li><a href="about.html">About</a></li>
                 </ul>
 
                 <div class="navRight">
@@ -35,9 +34,8 @@
                     <div class="loginImg">
                         <img src="../img/logos/logo-w.png" width="50px">
                     </div>
-                    <div id="invalidLoginContainer">
-                        <p id="invalidLogin">Invalid username and/or password</p>
-                    </div>
+                    
+                    <p id="invalidLogin">Invalid username and/or password</p>
 
                     <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
@@ -55,41 +53,45 @@
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
         
         <div class="locationContainer">
-            <div class="officeLoc">
+            <div class="officeLoc animateOnScroll">
                 <h1>Our Office Branches</h1>
-                <img class="locationImg" src="../img/etc/officeLocationMap.png" width="100%">
-                
-                <div class="pickupSteps">
-                    <h1>Picking-up</h1>
-                    <h2>Step 1:</h2>
-                    <p>Select and reserve vehicle</p>
-
-                    <h2>Step 2:</h2>
-                    <p>Pick up vehicle from selected office branch</p>
-
-                    <h2>Step 3:</h2>
-                    <p>Drive and enjoy!</p>
-                </div>
+                <img class="locationImg" src="../img/etc/officeLocationMap.png" width="100%">                
             </div>
             
 
-            <div class="carparkLoc">
+            <div class="carparkLoc animateOnScroll">
                 <h1>Vehicle Return Locations</h1>
                 <img class="locationImg" src="../img/etc/carparkLocationMap.png" width="100%">
-                
-                <div class="returnSteps">
-                    <h1>Returning</h1>
-                    <h2>Step 4:</h2>
-                    <p>Park the car at selected return location</p>
-
-                    <h2>Step 5:</h2>
-                    <p>Our agent will inspect the vehicle for damages</p>
-
-                    <h2>Step 6:</h2>
-                    <p>Final cost will be charged to your credit card in 1-2 days</p>
-                </div>
             </div>
-        </div><div class="clear"></div>
+        </div>
+        
+        <div class="stepsContainer">
+            <div class="pickupSteps animateOnScroll">
+                <h1>Picking-up</h1>
+                <h2>Step 1:</h2>
+                <p>Select and reserve vehicle</p>
+
+                <h2>Step 2:</h2>
+                <p>Pick up vehicle from selected office branch</p>
+
+                <h2>Step 3:</h2>
+                <p>Drive and enjoy!</p>
+            </div>
+            
+            <div class="returnSteps animateOnScroll">
+                <h1>Returning</h1>
+                <h2>Step 4:</h2>
+                <p>Park the car at selected return location</p>
+
+                <h2>Step 5:</h2>
+                <p>Our agent will conduct a post-rental inspection</p>
+
+                <h2>Step 6:</h2>
+                <p>Final cost will be charged to your credit card in 1-2 days</p>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 

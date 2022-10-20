@@ -10,14 +10,13 @@
 
     <body onload="checkLogin()">
         <header>
-            <div class="navContainer">
+            <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="index.html"><img src="img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
                 <ul class="navLinks">
                     <li><a href="index.html" class="navActive">Home</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="html/fleet.html">Our Fleet</a></li>
                     <li><a href="html/howto.html">How-to</a></li>
-                    <li><a href="html/about.html">About</a></li>
                 </ul>
 
                 <div class="navRight">
@@ -35,9 +34,8 @@
                     <div class="loginImg">
                         <img src="img/logos/logo-w.png" width="50px">
                     </div>
-                    <div id="invalidLoginContainer">
-                        <p id="invalidLogin">Invalid username and/or password</p>
-                    </div>
+                    
+                    <p id="invalidLogin">Invalid username and/or password</p>
 
                     <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
@@ -54,13 +52,13 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="bannerLeft">
+        <div class="bannerLeft animateOnScroll">
             <span>
                 <h1>Search and find your best car rental with easy way</h1>
                 <p>Drive performance and cross-functional collaboration with easy-to-use dashboards, data vis and automated insights in one click</p>
             
                 <button class="bannerBtn" type="button">Sign up</button>
-                <a class="bannerFleetLink" href="html/fleet.html">Our fleet</a>
+                <a class="bannerFleetLink" href="html/howto.html">How it works?</a>
             </span>
         </div>
 
@@ -70,7 +68,7 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="logoContainer">
+        <div class="logoContainer animateOnScroll">
             <span>
                 <a href="html/fleet.html"><img src="img/logos/carBrands/honda.png"></a>
                 <a href="html/fleet.html"><img src="img/logos/carBrands/nissan.png"></a>
@@ -83,11 +81,11 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="aboutLeft">
+        <div class="aboutLeft animateOnScroll">
             <img src="img/etc/aboutImg.png" width="100%">
         </div>
 
-        <div class="aboutRight">
+        <div class="aboutRight animateOnScroll">
             <span>
                 <h1>About Us</h1>
                 <h2>Wide selection of brands and models at your disposal</h2>
@@ -101,7 +99,7 @@
 
         <div class="whyUsWrapper">
             <div class="whyUsContainer">
-                <div class="whyUsTop">
+                <div class="whyUsTop animateOnScroll">
                     <span>
                         <h1>Why us?</h1>
                         <h2>We are the top EV rental company in Singapore</h2>
@@ -109,7 +107,7 @@
                     </span>
                 </div>
     
-                <div class="whyUsBtm">
+                <div class="whyUsBtm animateOnScroll">
                     <span class="whyUsBox">
                         <img src="img/icons/quality.png" width="125px">
                         <h2>Quality Service</h2>
@@ -133,13 +131,13 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="fleetTitle">
+        <div class="fleetTitle animateOnScroll">
             <h1>Fleet</h1>
             <h2>Our Fleet</h2>
         </div>
         
         <div class="fleetContainer">
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/hyundaiIoniq.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 68</h1>
@@ -147,7 +145,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </div>
 
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/hyundaiKona.png" width="100%">
                 <p>Economy</p>
                 <h1>$ 77</h1>
@@ -155,7 +153,7 @@
                 <button class="carRentBtn" type="button" onclick="location.href='html/rentProcess.html'">Rent car</button>
             </div>
 
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/bmwI3.png" width="100%">
                 <p>Premium Economy</p>
                 <h1>$ 84</h1>
@@ -163,7 +161,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </div>
 
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/miniElectric.png" width="100%">
                 <p>Premium Economy</p>
                 <h1>$ 115</h1>
@@ -171,7 +169,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </div>
 
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/tesla3.png" width="100%">
                 <p>Luxury/Sports</p>
                 <h1>$ 132</h1>
@@ -179,7 +177,7 @@
                 <button class="carRentBtn" type="button">Rent car</button>
             </div>
 
-            <div class="fleetItem">
+            <div class="fleetItem animateOnScroll">
                 <img src="img/cars/thumbnails/bmwi4.png" width="100%">
                 <p>Luxury/Sports</p>
                 <h1>$ 151</h1>
@@ -188,13 +186,13 @@
             </div>
         </div>
 
-        <div class="fullFleet"><button  onclick="document.location='html/fleet.html'" type="button">See full fleet &#8640;</button></div>
+        <div class="fullFleet animateOnScroll"><button  onclick="document.location='html/fleet.html'" type="button">See full fleet &#8640;</button></div>
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div class="newsletterFalseFooter">
-            <div class="newsletterContainer">
+            <div class="newsletterContainer animateOnScroll">
                 <span>
                     <h2>Subscribe to our newsletter</h2>
                     <p>Get access to exclusive deals and promotions</p>
