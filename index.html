@@ -8,34 +8,57 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
+    <body class="indexPage" onload="checkLogin()">
         <header>
-            <div class="navContainer">
+            <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="index.html"><img src="img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
                 <ul class="navLinks">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html" class="navActive">Home</a></li>
+                    <li><a href="html/fleet.html">Our Fleet</a></li>
+                    <li><a href="html/howto.html">How-to</a></li>
                 </ul>
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
-                    <button class="loginBtn" type="button" onclick="openForm()">Login</button>
+                    <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
                 </div>
             </div>
         </header>
-        
+
+        <div id="loginPopup" class="modalBg">
+            <form id="loginContent">
+                <div class="loginContainer">
+                    <div onclick="document.getElementById('loginPopup').style.display='none'" class="loginXBtn">&times;</div>
+
+                    <div class="loginImg">
+                        <img src="img/logos/logo-w.png" width="50px">
+                    </div>
+                    
+                    <p id="invalidLogin">Invalid username and/or password</p>
+
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" name="username" id="usernameField" placeholder="Username">
+            
+                    <label for="pwd"><b>Password:</b></label>
+                    <input type="password" name="password" id="passwordField" placeholder="Password">
+
+                    <input type="submit" value="Login" id="loginBtn" onclick="rememberMe()">
+                    <label><input type="checkbox" id="rememberMeCB" value="rememberMe"> Remember me</label>
+                    <span class="forgotPwd">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+        </div><div class="clear"></div>
+
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="bannerLeft">
+        <div class="bannerLeft animateOnScroll">
             <span>
-                <h1>Search and find your best car rental with easy way</h1>
-                <p class="sectionText">Drive performance and cross-functional collaboration with easy-to-use dashboards, data vis and automated insights in one click</p>
+                <h1>Drive and experience electric vehicles the easy way</h1>
+                <p>Ranging from performance to cross-functional vehicles, whether you are looking for a fun driving experience, or a practical car for your family, we have you covered.</p>
             
                 <button class="bannerBtn" type="button">Sign up</button>
-                <a class="sectionTitle" href="#">Our fleet</a>
+                <a class="bannerLink" href="html/howto.html">How it works?</a>
             </span>
         </div>
 
@@ -45,141 +68,148 @@
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="logoContainer">
+        <div class="logoContainer animateOnScroll">
             <span>
-                <img src="img/logos/hondaLogo.png" width="70px">
-                <img src="img/logos/nissanLogo.png" width="70px">
-                <img src="img/logos/hyundaiLogo.png" width="70px">
-                <img src="img/logos/miniLogo.png" width="70px">
-                <img src="img/logos/bmwLogo.png" width="70px">
-                <img src="img/logos/teslaLogo.png" width="70px">
+                <a href="html/fleet.html"><img src="img/logos/carBrands/honda.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/nissan.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/hyundai.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/mini.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/bmw.png"></a>
+                <a href="html/fleet.html"><img src="img/logos/carBrands/tesla.png"></a>
             <span>
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="aboutLeft">
-            <img src="img/etc/aboutImg.png" width="100%">
-        </div>
-
-        <div class="aboutRight">
-            <span>
-                <p class="sectionTitle">About Us</p>
-                <h2 class="sectionSubTitle">Wide selection of brands and models at your disposal</h2>
-                <p class="sectionText">Get the car of your dreams with the installments of your choice. There are <b>various attractive</b> offers from Moladin through our collaboration with various trusted leasing partners.</p>
-            
-                <button class="aboutBtn" type="button">Rent now &raquo;</button>
-            </span>
+        <div class="aboutContainer">
+            <div class="aboutLeft animateOnScroll">
+                <img src="img/etc/aboutImg.png" width="100%">
+            </div>
+    
+            <div class="aboutRight animateOnScroll">
+                <span>
+                    <h1>About Us</h1>
+                    <h2>Wide selection of brands and models to choose from</h2>
+                    <p>In addition to our <b>well maintained vehicles</b>, we have multiple locations throughout the <b>Central, West and East regions</b>, so you are sure to find an accessible pick-up and drop-off point near you.</p>
+                
+                    <button class="aboutBtn" type="button" onclick="location.href='html/fleet.html'">Find out more &#8640;</button>
+                </span>
+            </div>
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div class="whyUsWrapper">
-            <div class="whyUsContainer">
-                <div class="whyUsTop">
+                <div class="whyUsTop animateOnScroll">
                     <span>
-                        <p class="sectionTitle">Why us?</p>
-                        <h2 class="sectionSubTitle">We are the top EV rental company in Singapore</h2>
-                        <p class="sectionText">Get the car of your dreams with the installments of your choice. There are <b>various attractive</b> offers from Moladin through our collaboration with various trusted leasing partners.</p>
+                        <h1>Why us?</h1>
+                        <h2>We are the top EV rental company in Singapore</h2>
+                        <p>With over <b>2500+ satisfied customers</b> and <b>10 years of experience</b> in the Automotive industry, we are committed to continue providing our customers with a convenient and fuss-free rental experience.</p>
                     </span>
                 </div>
     
                 <div class="whyUsBtm">
-                    <span class="whyUsBox">
-                        <img src="img/icons/quality.png" width="125px">
-                        <h2>Quality Service</h2>
-                        <p>Search from a wide selection of cars curated by Renty partners the fast and easy way</p>
-                    </span>
-    
-                    <span class="whyUsBox">
-                        <img src="img/icons/deposit.png" width="125px">
-                        <h2>No Deposit Required</h2>
-                        <p>Renty partners are ready to help you find your dream car for your holiday in the city</p>
-                    </span>
-    
-                    <span class="whyUsBox">
-                        <img src="img/icons/time.png" width="125px">
-                        <h2>Quick and Easy</h2>
-                        <p>Transaction process is completed within 24 hours (verified by Bank of Singapore)</p>
-                    </span>
+                    <div class="whyUsBtmWrapper animateOnScroll">
+                        <span class="whyUsBox">
+                            <img src="img/icons/quality.png" width="125px">
+                            <h2>Quality Service</h2>
+                            <p>Our highly-trained and friendly staff are available to assist you 24/7.</p>
+                        </span>
+        
+                        <span class="whyUsBox">
+                            <img src="img/icons/deposit.png" width="125px">
+                            <h2>No Deposit Required</h2>
+                            <p>You will only be charged for your usage after the rental period has ended.</p>
+                        </span>
+        
+                        <span class="whyUsBox">
+                            <img src="img/icons/time.png" width="125px">
+                            <h2>Quick and Easy</h2>
+                            <p>Convenient online booking system allows you to reserve and start driving within the day.</p>
+                        </span>
+                    </div>
                 </div>
-            </div>
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="fleetTitle">
-            <p class="sectionTitle">Fleet</p>
-            <h2 class="sectionSubTitle">Our Fleet</h2>
-        </div>
-        
-        <div class="fleetContainer">
-            <div class="fleetRow">
-                <span class="carBox">
-                    <img src="img/cars/cropped/hyundaiIoniq.png" width="100%">
+        <div class="contentContainer">
+            <div class="titleContainer animateOnScroll">
+                <h1>Fleet</h1>
+                <h2>Our Fleet</h2>
+            </div>
+            
+            <div class="fleetContainer">
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/hyundaiIoniq.png" width="100%">
+                    <p>Economy</p>
                     <h1>$ 68</h1>
                     <h2>Hyundai Ioniq 2018</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
-
-                <span class="carBox">
-                    <img src="img/cars/cropped/hyundaiKona.png" width="100%">
+                    <button class="carRentBtn" type="button">Rent car</button>
+                </div>
+    
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/hyundaiKona.png" width="100%">
+                    <p>Economy</p>
                     <h1>$ 77</h1>
                     <h2>Hyundai Kona 2019</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
-
-                <span class="carBox">
-                    <img src="img/cars/cropped/bmwI3.png" width="100%">
+                    <button class="carRentBtn" type="button" onclick="location.href='html/rentProcess.html'">Rent car</button>
+                </div>
+    
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/bmwI3.png" width="100%">
+                    <p>Premium Economy</p>
                     <h1>$ 84</h1>
                     <h2>BMW i3 2014</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
-            </div>
-
-            <div class="fleetRow">
-                <span class="carBox">
-                    <img src="img/cars/cropped/miniElectric.png" width="100%">
+                    <button class="carRentBtn" type="button">Rent car</button>
+                </div>
+    
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/miniElectric.png" width="100%">
+                    <p>Premium Economy</p>
                     <h1>$ 115</h1>
                     <h2>Mini Electric 2020</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
-
-                <span class="carBox">
-                    <img src="img/cars/cropped/tesla3.png" width="100%">
+                    <button class="carRentBtn" type="button">Rent car</button>
+                </div>
+    
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/tesla3.png" width="100%">
+                    <p>Luxury/Sports</p>
                     <h1>$ 132</h1>
                     <h2>Tesla Model 3 2021</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
-
-                <span class="carBox">
-                    <img src="img/cars/cropped/bmwi4.png" width="100%">
+                    <button class="carRentBtn" type="button">Rent car</button>
+                </div>
+    
+                <div class="fleetItem animateOnScroll">
+                    <img src="img/cars/thumbnails/bmwi4.png" width="100%">
+                    <p>Luxury/Sports</p>
                     <h1>$ 151</h1>
                     <h2>BMW i4 2022</h2>
-                    <button class="carRentBtn" type="button">Rent now</button>
-                </span>
+                    <button class="carRentBtn" type="button">Rent car</button>
+                </div>
             </div>
-
-            <div class="fullFleet"><button class="fullFleetBtn" type="button">See full fleet &raquo;</button></div>
+    
+            <div class="fullFleet animateOnScroll"><button  onclick="document.location='html/fleet.html'" type="button">See full fleet &#8640;</button></div>
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
         <div class="newsletterFalseFooter">
-            <div class="newsletterContainer">
+            <div class="newsletterContainer animateOnScroll">
                 <span>
-                    <h2 class="sectionSubTitle">Subscribe to our newsletter</h2>
-                    <p class="sectionText">Get access to exclusive deals and updates</p>
+                    <h2>Subscribe to our newsletter</h2>
+                    <p>Get access to exclusive deals and promotions</p>
                 </span>
                 <span>
-                    <input class="newsletterInput" type="email" placeholder="Enter your email">
+                    <input type="email" placeholder="Enter your email">
                     <button class="newsletterBtn" type="button">Subscribe</button>
+                </span>
             </div>
-        </div>
+        </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
 
-        <div class="footerWrapper">
+        <footer>
             <div class="footerContainer">
                 <span class="footerLeft">
                     <a href="index.html"><img src="img/logos/fullLogo-w.png" width="150px"></a>
@@ -201,8 +231,9 @@
                     </span>
                 </span>
             </div>
-        </div>
+        </footer>
 
+        <script src="js/main.js"></script>
     </body>
 
 </html>

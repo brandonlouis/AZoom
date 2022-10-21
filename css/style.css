@@ -1,3 +1,5 @@
+/* Colors: #ffc107 (Base orange), #eca216 (Dark orange), #2d333d (Base background), #242931 (Dark background) */
+
 /* General */
 .clear { clear:both; }
 
@@ -6,10 +8,9 @@ body {
     background-color: #2d333d;
     margin: 0%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
-button {
+button, input[type=submit] { /* Buttons */ 
     font-family: "Segoe UI", "Helvetica Neue";
     cursor: pointer;
     border: none;
@@ -23,16 +24,22 @@ button {
     padding: 12px 0;
     margin-top: 5%;
 }
+button:hover, input[type=submit]:hover {
+    background-color: #eca216;
+    transition: 0.2s;
+}
 
+#loginBtn, .carRentBtn, .proceedResBtn, .confirmResBtn { /* Full width buttons */
+    width: 100%;
+}
 
-input {
+input:not(input[type=submit], input[type=checkbox]), select { /* Textfields */
     font-family: "Segoe UI", "Helvetica Neue";
     width: 100%;
     padding: 8px 12px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid white;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
     border-radius: 6px;
@@ -40,40 +47,61 @@ input {
     color:white;
     font-size: 16px;
 }
-input:focus {
+input:focus:not(input[type=submit], input[type=checkbox]), select:focus { /* Focus animation */
     box-shadow: 0 0 7px #3671ca;
     padding: 8px 12px;
     margin: 8px 0;
     border: 1px solid #3671ca;
 }
 
-.sectionTitle {
+h1, .bannerLink{
+    color: #ffc107;
     font-size: 20px;
     font-weight: 600;
-    color: #ffc107;
-    animation: hFadeIn 2s ease-out;
 }
 
-.sectionSubTitle {
+h2 {
     color: white;
     font-size: 50px;
     font-weight: 600;
     margin-top: 0;
-    animation: hFadeIn 2s ease-out;
 }
 
-.sectionText {
+p {
     margin-top: -1em;
     font-size: 20px;
     color: rgb(190, 190, 190);
-    animation: hFadeIn 2s ease-out;
 }
+
+img {
+    border-radius: 6px;
+}
+
+.contentContainer {
+    margin: 2% 10% 10%;
+}
+
+.titleContainer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.animateScrollUp {
+    animation: hFadeIn 2s 0.1s ease-out backwards;
+}
+
+/* Revert styles*/
+.footerRight p, .whyUsBtm h2, .whyUsBox p, .fleetItem h1, .fleetItem h2, .fleetPage .fleetTitle h1, .xrayContainer p {
+    all: revert;
+}
+
+
+
 
 
 /* Navbar */
 .navContainer {
     margin: 0 10%;
-    animation: hFadeIn 2s ease-out;
 }
 
 /* Left navbar links */
@@ -107,8 +135,8 @@ li a {
     text-decoration: none;
 }
 
-.active {
-    color: #f9ac43;
+.navActive {
+    color: #eca216;
 }
 
 /* Right navbar elements (Login and Searchbox) */
@@ -118,277 +146,15 @@ li a {
     margin-top: 22px;
 }
 
-.loginBtn {
+#navLoginBtn {
     padding: 8px 13px;
     margin: 9px 0 9px 15px;
     font-size: 16px;
 }
 
 
-/* Banner */
-/* Title and button */
-.bannerLeft {
-    float: left;
-    height: 700px;
-    width: 40%;
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
-}
-
-.bannerLeft h1 {
-    color: white;
-    font-size: 65px;
-    font-weight: 600;
-    margin-bottom: 5%;
-    margin-top: 0%;
-    animation: hFadeIn 2s ease-out;
-}
-
-.bannerLeft .sectionText {
-    margin-top: 0;
-}
-
-.bannerBtn {
-    padding: 12px 30px;
-    animation: hFadeIn 2s ease-out;
-}
-
-.bannerLeft .sectionTitle {
-    color: white;
-    margin-left: 50px;
-}
-
-/* Honda and background */
-.bannerRight {
-    float: right;
-    height: 700px;
-    width: 50%;
-    background-image: url("../img/etc/rightBanner_bg.png");
-    background-attachment: fixed;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 300px 0px 300px #2d333d inset;
-    line-height: 700px;
-    text-align: right;
-    animation: fadeIn 2s;
-}
-
-.bannerRight img {
-    vertical-align: middle;
-    animation: flyInRight 1s ease-out;
-}
-
-
-/* Logo section */
-.logoContainer {
-    width: 80%;
-    display: table;
-    table-layout: fixed;
-    margin: 0 10%;
-}
-
-.logoContainer span {
-    display: table-cell;
-    text-align: center;
-}
-
-.logoContainer img {
-    margin: 50px 75px;
-    animation: hFadeIn 2s ease-out;
-    transition: transform .2s ease-in-out; 
-}
-
-.logoContainer img:hover { 
-    transform: scale(1.7); 
-}
-
-
-/* About section */
-/* Image */
-.aboutLeft {
-    float: left;
-    height: 700px;
-    width: 35%;
-    margin-left: 10%;
-    line-height: 700px;
-    text-align: right;
-    overflow: hidden;
-}
-
-.aboutLeft img {
-    vertical-align: middle;
-    animation: zoomAppear 1s ease;
-}
-
-/* Title and button */
-.aboutRight {
-    float: right;
-    height: 700px;
-    width: 45%;
-    margin-right: 10%;
-    display: flex;
-    align-items: center;
-}
-
-.aboutRight span {
-    margin-left: 60px;
-}
-
-.aboutRight h2 {
-    color: white;
-}
-
-.aboutBtn {
-    padding: 12px 40px;
-    animation: hFadeIn 2s ease-out;
-}
-
-
-/* Why us section */
-.whyUsWrapper {
-    background-image: url('../img/etc/whyUs_bg.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.whyUsContainer {
-    margin: 0 10%;
-    height: 650px;
-}
-
-/* Title */
-.whyUsTop {
-    padding: 7% 20% 30px;
-    text-align: center;
-}
-
-.whyUsTop .sectionSubTitle {
-    color: black;
-}
-
-.whyUsTop .sectionText {
-    color: rgb(90, 90, 90);
-}
-
-/* Boxes */
-.whyUsBtm {
-    color:white;
-    display: flex;
-}
-
-.whyUsBtm span {
-    text-align: left;
-}
-
-.whyUsBox {
-    margin: 2%;
-    background-color: #2d333d;
-    padding: 30px;
-    border-top: 8px solid #ffc107;
-    box-shadow: 0 20px 50px rgb(0 0 0 / 0.1);
-}
-
-.whyUsBox p {
-    font-size: 20px;
-}
-
-
-/* Fleet section */
-/* Title */
-.fleetTitle {
-    margin-top: 300px;
-    text-align: center;
-}
-
-/* Cars */
-.fleetContainer {
-    margin: 0 10%;
-}
-
-.fleetRow {
-    color:white;
-    display: flex;
-    table-layout: fixed;
-}
-
-.fleetRow span {
-    display: table-cell;
-    text-align: left;
-}
-
-.carBox {
-    margin: 1%;
-    background-color: #2d333d;
-    padding: 30px;
-    box-shadow: 0 20px 50px rgb(0 0 0 / 0.2);
-}
-
-.carBox h1::first-letter {
-    color: #ffc107;
-}
-
-.carBox h1::after {
-    content: " /day";
-    color: rgb(150, 150, 150);
-    font-weight: 100;
-    font-size: 20px;
-}
-
-.carBox h2 {
-    font-weight: 400;
-}
-
-.carRentBtn {
-    width:100%;
-}
-
-/* See fleet button */
-.fullFleet {
-    width: 100%;
-    text-align: center;
-}
-
-.fullFleetBtn {
-    width: 300px;
-}
-
-
-/* Newsletter section */
-.newsletterFalseFooter {
-    margin-top: 8%;
-    background: linear-gradient(to bottom, #2d333d 50%, #242931 50%);
-    width: 100%;
-    text-align: center;
-}
-
-/* Title */
-.newsletterContainer {
-    padding: 4% 6%;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #1c2026;
-    box-shadow: 0 20px 50px rgb(0 0 0 / 0.15);
-    border-radius: 12px;
-}
-
-/* Text and button */
-.newsletterInput {
-    width: 70%
-}
-
-.newsletterBtn {
-    padding: 9px 13px;
-    font-size: 16px;
-    margin: 0;
-}
-
-
 /* Footer section */
-.footerWrapper{
+footer {
     background-color: #242931;
     width: 100%;
 }
@@ -428,15 +194,665 @@ li a {
 
 
 
+/* LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  */
+/* Darken background */
+.modalBg, #successPage {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+}
 
-/* Animations */
-@keyframes flyInRight {
+#loginContent, #creditCardContent {
+    background-color: #242931;
+    margin: 5% auto 15% auto;
+    border-radius: 15px;
+    width: 350px;
+    padding: 0 45px 45px;
+    color: white;
+    animation: animatePopup 0.6s
+}
+
+.loginContainer {
+    display: inline-block;
+}
+
+.loginImg {
+    text-align: center;
+}
+
+#invalidLogin {
+    color: red;
+    text-align: center;
+    margin: revert;
+    display:none;
+}
+
+.loginXBtn { /* FIX DIV WIDTH CLICK ISSUE */
+    text-align: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: -25px;
+}
+
+#loginBtn, .confirmResBtn {
+    margin-bottom: 20px;
+}
+
+.forgotPwd {
+    float: right;
+}
+.forgotPwd a {
+    color: inherit;
+}
+
+
+
+
+
+/* INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML */
+/* Banner */
+/* Title and button */
+.bannerLeft {
+    float: left;
+    height: 700px;
+    width: 40%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.bannerLeft h1 {
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 5%;
+    margin-top: 0;
+}
+
+.bannerLeft p {
+    margin-top: 0;
+}
+
+.bannerBtn {
+    padding: 12px 30px;
+}
+
+.bannerLeft .bannerLink {
+    color: white;
+    margin-left: 50px;
+}
+
+/* Honda and background */
+.bannerRight {
+    float: right;
+    height: 700px;
+    line-height: 700px;
+    width: 50%;
+    overflow-x: hidden;
+    background-image: url("../img/etc/rightBanner_bg.png");
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 300px 0px 300px #2d333d inset;
+    text-align: right;
+    animation: fadeIn 2s;
+}
+
+.bannerRight img {
+    vertical-align: middle;
+    animation: flyInRight 1s ease-out;
+}
+
+
+/* Logo section */
+.logoContainer {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.logoContainer span {
+    display: table-cell;
+    text-align: center;
+}
+
+.logoContainer img {
+    width: 70px;
+    margin: 50px 5%;
+    transition: transform .2s ease-in-out;
+}
+
+.logoContainer img:hover { 
+    transform: scale(1.7); 
+}
+
+
+/* About section */
+.aboutContainer {
+    margin: 7% 10%;
+    display: flex;
+    align-items: center;
+}
+/* Image */
+.aboutLeft {
+    width: 45%;
+}
+
+/* Title and button */
+.aboutRight {
+    float: right;
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutRight span {
+    margin-left: 60px;
+}
+
+.aboutBtn {
+    padding: 12px 35px;
+}
+
+
+/* Why us section */
+.whyUsWrapper {
+    background-image: url('../img/etc/whyUs_bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whyUsContainer {
+    margin: 0 10%;
+    height: 650px;
+}
+
+/* Title */
+.whyUsTop {
+    width: 55%;
+    padding-top: 7%;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;    
+}
+
+.whyUsTop h1 {
+    text-shadow: 0 0 20px rgb(0 0 0 / 0.3);
+}
+
+.whyUsTop h2 {
+    color: black;
+}
+
+.whyUsTop p {
+    color: rgb(100, 100, 100);
+}
+
+/* Boxes section */
+.whyUsBtm {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, #2d333d 50%);
+}
+
+.whyUsBtm span {
+    color:white;
+    text-align: left;
+}
+
+.whyUsBtmWrapper {
+    display: flex;
+    margin: 0 10%;
+    justify-content: center;
+}
+
+.whyUsBox {
+    width: 100%;
+    margin: 2%;
+    background-color: #2d333d;
+    padding: 30px;
+    border-top: 8px solid #ffc107;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.1);
+}
+
+.whyUsBox p {
+    font-size: 20px;
+}
+
+/* Index.html Fleet secton */
+.indexPage .contentContainer {
+    margin-top: 8%;
+}
+
+.indexPage .titleContainer {
+    width: 55%;
+}
+
+/* For all fleet grid displays */
+/* Cars */
+.fleetContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.fleetItem {
+    margin: 3%;
+    padding: 15px;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.2);
+    border-radius: 12px;
+    background-color: #e3e3e3;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.fleetItem p {
+    margin: 15px 0 0;
+    color: #eca216;
+    font-size: 15px;
+    text-align: right;
+}
+
+.fleetItem h1 {
+    margin: -25px 0 0;
+}
+
+.fleetItem h1::first-letter {
+    color: #ffc107;
+}
+
+.fleetItem h1::after {
+    content: " /day";
+    color: rgb(100, 100, 100);
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.fleetItem h2 {
+    font-weight: 400;
+}
+
+.carRentBtn {
+    margin-top: 2%;
+}
+
+/* See fleet button */
+.fullFleet { /* Container */
+    width: 100%;
+    text-align: center;
+}
+
+.fullFleet button {
+    width: 20%;
+}
+
+
+/* Newsletter section */
+.newsletterFalseFooter {
+    background: linear-gradient(to bottom, #2d333d 50%, #242931 50%);
+    width: 100%;
+    text-align: center;
+}
+
+/* Title */
+.newsletterContainer {
+    padding: 4% 6%;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #1c2026;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 0.15);
+    border-radius: 12px;
+}
+
+/* Text and button */
+.newsletterContainer input {
+    width: 70% !important;
+}
+
+.newsletterBtn {
+    padding: 9px 13px;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+
+
+/* FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML FLEET.HTML */
+.fleetHeaderWrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Title */
+.fleetPage .fleetTitle {
+    color: white;
+    text-align: left;
+    width: 35%;
+}
+
+/* Filters */
+.fleetFilters {
+    text-align: right;
+    width: 65%;
+}
+
+.filterBox {
+    cursor: pointer;
+    background-color: rgb(0 0 0 / 0);
+    color: white;
+    padding: 10px 25px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+/* Filter dropdown */
+.filterDrop {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.filterContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.filterContent label {
+    cursor: pointer;
+    padding: 12px 25px;
+    display: block;
+    user-select: none; 
+    font-weight: 500;
+}
+
+.filterContent input {
+    margin-right: 15px;
+}
+
+.filterDrop:hover .filterContent {
+    display: block;
+    animation: dropDownMenu 0.3s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.filterDrop:hover .filterBox {
+    background-color: #1f242b;
+}
+
+
+
+
+
+/* RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML */
+.reservationContainer {
+    display: flex;
+}
+
+.xrayContainer {
+    width: 40%;
+}
+
+.xrayCar {
+    background-image: url('/img/cars/xray/konaXray.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    width: 380px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+}
+
+/* Engine Spot  */
+.engineSpot { /* Spot coordinates */
+    position: absolute;
+    left: 177px;
+    top: 100px;
+}
+
+/* Infotainment Spot  */
+.infotainmentSpot {
+    position: absolute;
+    left: 177px;
+    top: 300px;
+}
+
+/* Seats Spot  */
+.seatsSpot {
+    position: absolute;
+    left: 177px;
+    top: 470px;
+}
+
+/* Boot Spot  */
+.bootSpot {
+    position: absolute;
+    left: 177px;
+    top: 730px;
+}
+
+.engineSpot span, .infotainmentSpot span, .seatsSpot span, .bootSpot span { /* Spot design */
+    border: 3px solid #ffc107;
+    border-radius: 50px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-self: center;
+}
+
+.engineSpot:hover span, .infotainmentSpot:hover span, .seatsSpot:hover span, .bootSpot:hover span { /* Spot hover effect */
+    box-shadow: 0 0 40px 10px #cc9900;
+    transform: scale(1.5);
+    transition: 0.2s;
+}
+
+.engineBox, .infotainmentBox, .seatsBox, .bootBox { /* Hide textbox */
+    display: none;
+}
+
+.engineSpot:hover .engineBox, .infotainmentSpot:hover .infotainmentBox, .seatsSpot:hover .seatsBox, .bootSpot:hover .bootBox { /* Show textbox */
+    display: inline-block;
+    background: black;
+    color: white;
+    position: relative;
+    left: 20px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    min-width: 200px;
+    animation: dropDownMenu 0.3s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+
+/* Booking form */
+.bookingFormContainer {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+#bookingForm {
+    color: white;
+    padding: 30px;
+    background-color: #1f242b;
+    border-radius: 10px;
+}
+
+#bookingForm h1 {
+    margin-top: 0;
+}
+
+/* Rental details section */
+.rentalDetails {
+    width: 100%;
+    display: flex;
+}
+
+.rentalDetailsLeft {
+    display: grid;
+    width: 45%;
+    padding-right: 10%;
+}
+
+.rentalDetailsRight {
+    display: grid;
+    width: 45%;
+}
+
+.proceedResBtn {
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+
+/* Credit card info popup */
+#creditCardContent {
+    width: 500px;
+}
+
+#creditCardPopup h1 {
+    padding: 40px 0 10px;
+}
+
+.creditCardOwner {
+    width: 63%;
+    margin-right: 10px;
+}
+.creditCardCVV {
+    width: 35%;
+}
+
+.creditCardExpiration {
+    display: flex;
+}
+
+.creditCardExpiration select {
+    padding: 10px;
+    margin-right: 12px;
+    width: auto;
+}
+
+.creditCardImg {
+    display: flex;
+    align-items: center;
+    margin-left: 95px;
+}
+
+.creditCardImg img {
+    margin-left: 10px;
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+
+/* Success page */
+#successPage {
+    background-color: #2d333d;
+    padding-top: 0;
+    animation: animatePopup 0.6s
+}
+
+.messageContainer {
+    margin: auto auto;
+    width: 800px;
+    text-align: center;
+}
+
+.messageContainer p {
+    margin-top: inherit;
+}
+
+.redirectLogo {
+    animation: spin 2s 0.4s ease-in-out backwards infinite;
+}
+
+/* Confetti */
+/* #canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+
+
+/* HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML HOWTO.HTML */
+.pickUpContainer, .returnContainer {
+    width: 90%;
+    background-color: #1c2026;
+    border-radius: 10px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+/* Pickup instructions section */
+.howToImg {
+    width: 65%;
+}
+.howToImg h1 {
+    margin-top: 0;
+}
+
+.howToSteps {
+    margin-left: 5%;
+    width: 30%;
+}
+.howToSteps h2 {
+    margin-bottom: 20px;
+}
+
+/* Return instructions section */
+.returnContainer {
+    margin-top: 5%;
+}
+
+.returnContainer .howToImg {
+    margin-left: 5%;
+}
+
+.returnContainer .howToSteps {
+    margin: 0;
+}
+
+
+
+
+/* ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS ANIMATIONS */
+@keyframes flyInRight { /* For index.html banner's Honda E */
     0% { transform: translateX(100%); }
 
     100% { transform: translateX(0); }
 }
 
-@keyframes hFadeIn {
+@keyframes hFadeIn { /* For observer scroll into view */
     0% {
         opacity: 0;
         transform: translateY(80%);
@@ -454,12 +870,74 @@ li a {
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn { /* For index.html banner map background */
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@keyframes zoomAppear {
-    0% { transform: scale(1.5); }
-    100% { transform: scale(1); }
+@keyframes animatePopup { /* For login and credit card */
+    from {transform: translateY(-150%)} 
+    to {transform: translateY(0)}
+}
+
+@keyframes spin { /* AZoom logo loading animation (currently only for redirecting screen) */
+    0% {
+        transform:rotate(0deg);
+    }
+
+    50% {
+        transform:rotate(180deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes dropDownMenu { /* Dropdown filter and car info hover */
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+}
+
+
+
+
+
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    .fleetContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logoContainer img {
+        margin: 4%;
+    }
+
+    .navLinks li {
+        margin: revert;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .reservationContainer {
+        display: block;
+    }
+    .xrayContainer {
+        width: revert;
+    }
+    .xrayCar {
+        margin: 0 auto;
+    }
+
+    .bookingFormContainer {
+        width: 70%;
+        margin: 5% auto 0;
+    }
 }
