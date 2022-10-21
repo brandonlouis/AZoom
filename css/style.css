@@ -292,14 +292,15 @@ footer {
 .bannerRight {
     float: right;
     height: 700px;
+    line-height: 700px;
     width: 50%;
+    overflow-x: hidden;
     background-image: url("../img/etc/rightBanner_bg.png");
     background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 300px 0px 300px #2d333d inset;
-    line-height: 700px;
     text-align: right;
     animation: fadeIn 2s;
 }
@@ -335,28 +336,20 @@ footer {
 
 
 /* About section */
+.aboutContainer {
+    margin: 7% 10%;
+    display: flex;
+    align-items: center;
+}
 /* Image */
 .aboutLeft {
-    float: left;
-    height: 700px;
-    width: 35%;
-    margin-left: 10%;
-    line-height: 700px;
-    text-align: right;
-    overflow: hidden;
-}
-
-.aboutLeft img {
-    vertical-align: middle;
-    border-radius: 6px;
+    width: 45%;
 }
 
 /* Title and button */
 .aboutRight {
     float: right;
-    height: 700px;
-    width: 45%;
-    margin-right: 10%;
+    width: 55%;
     display: flex;
     align-items: center;
 }
@@ -904,4 +897,13 @@ footer {
     100% {
         transform: rotateX(0deg) 
     }
+}
+
+
+
+
+/* Responsive */
+@media only screen and (min-width: 1150px) {
+
+
 }
