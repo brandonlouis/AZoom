@@ -13,15 +13,34 @@
             <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="index.html"><img src="img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
-                <ul class="navLinks">
-                    <li><a href="index.html" class="navActive">Home</a></li>
-                    <li><a href="html/fleet.html">Our Fleet</a></li>
-                    <li><a href="html/howto.html">How-to</a></li>
-                </ul>
+                <div class="navLinks">
+                    <a href="index.html" class="navActive">Home</a>
+                    <a href="html/fleet.html">Our Fleet</a>
+                    <a href="html/howto.html">How-to</a>
+                </div>
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
                     <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
+                </div>
+
+                <div class="navHamburger" onclick="dropDownNav()">
+                    <img src="img/icons/hamburger.png">
+                </div>
+            </div>
+
+            <div id="modalNavContainer">
+                <div class="navLinks">
+                    <div class="modalLinkContainer">
+                        <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
+                        <a href="index.html" class="navActive">Home</a>
+                        <a href="html/fleet.html">Our Fleet</a>
+                        <a href="html/howto.html">How-to</a>
+                    </div>
+
+                    <div class="modalNavLoginContainer">
+                        <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
+                    </div>
                 </div>
             </div>
         </header>

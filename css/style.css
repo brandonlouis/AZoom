@@ -102,6 +102,9 @@ img {
 /* Navbar */
 .navContainer {
     margin: 0 10%;
+    height: 105px;
+    display: flex;
+    align-items: center;
 }
 
 /* Left navbar links */
@@ -114,42 +117,37 @@ img {
 
 .homeLogo {
     float: left;
-    margin: 27px 26px 0 0;
+    margin: 0 26px 0 0;
 }
 
-.navLinks {
-    display: inline-block;
-}
-
-.navLinks li {
+.navLinks a {
     float: left;
-    margin: 0 8px;
-}
-
-li a {
     display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
-    margin: 30px 6px;
-    padding: 10px;
+    padding: 14px 16px;
+    margin: 0 8px 0;
     text-decoration: none;
 }
 
 .navActive {
-    color: #eca216;
+    color: #eca216 !important; 
 }
 
 /* Right navbar elements (Login and Searchbox) */
 .navRight {
-    float: right;
     display: flex;
-    margin-top: 22px;
+    margin-left: auto;
 }
 
 #navLoginBtn {
     padding: 8px 13px;
     margin: 9px 0 9px 15px;
     font-size: 16px;
+}
+
+.navHamburger {
+    display: none;
 }
 
 
@@ -169,7 +167,6 @@ footer {
 /* Azoom Logo */
 .footerLeft {
     width: 33%;
-    text-align: left;
 }
 
 /* Social media */
@@ -405,7 +402,6 @@ footer {
 
 .whyUsBtm span {
     color:white;
-    text-align: left;
 }
 
 .whyUsBtmWrapper {
@@ -537,7 +533,6 @@ footer {
 /* Title */
 .fleetPage .fleetTitle {
     color: white;
-    text-align: left;
     width: 35%;
 }
 
@@ -791,14 +786,6 @@ footer {
     animation: spin 2s 0.4s ease-in-out backwards infinite;
 }
 
-/* Confetti */
-/* #canvas {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-}
-
 
 
 
@@ -841,6 +828,7 @@ footer {
 .returnContainer .howToSteps {
     margin: 0;
 }
+
 
 
 
@@ -894,7 +882,7 @@ footer {
     }
 }
 
-@keyframes dropDownMenu { /* Dropdown filter and car info hover */
+@keyframes dropDownMenu { /* Responsive navbar, dropdown filter and car info hover */
     0% {
         transform: rotateX(-90deg)
     }
@@ -939,5 +927,60 @@ footer {
     .bookingFormContainer {
         width: 70%;
         margin: 5% auto 0;
+    }
+}
+
+/* Responsive navbar */
+@media only screen and (max-width: 980px) {
+    .navHamburger { /* Show hamburger */
+        display: block;
+        margin-left: auto;
+    }
+
+    .navContainer .navLinks{ /* Hide original nav items */
+        display: none;
+    }
+    .navContainer .navRight { /* Hide original nav items */
+        display: none;
+    }
+
+    #modalNavContainer {
+        position: absolute;
+        right: 11%;
+        top: 80px;
+        background-color: #242931;
+        border: 2px solid #ffc107;
+        border-radius: 8px;
+        z-index: 1;
+        display: none;
+        animation: dropDownMenu 0.3s ease-in-out forwards;
+        transform-origin: top center;
+    }
+
+    .modalLinkContainer {
+        display: grid;
+        padding: 20px 20px 0;
+    }
+    .modalLinkContainer a {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .modalNavLoginContainer {
+        padding: 20px;
+        background-color: #1c2026;
+        border-radius: 8px;
+    }
+
+    .modalNavLoginContainer #navLoginBtn, #modalNavContainer .navLinks .navSearchInput {
+        width: 100%;
+        margin: revert;
+    }
+}
+
+/* Hide responsive navbar contents */
+@media only screen and (min-width: 981px) { 
+    #modalNavContainer {
+        display: none !important;
     }
 }
