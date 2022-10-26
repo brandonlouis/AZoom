@@ -226,6 +226,7 @@ footer {
 #invalidLogin {
     color: red;
     text-align: center;
+    font-size: 18px;
     margin: revert;
     display:none;
 }

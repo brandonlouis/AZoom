@@ -21,7 +21,7 @@ function dropDownNav() {
     }
 }
 
-// Login popup; Closes form when user clicks outside of it.
+// Login and Credit card popup; Closes form when user clicks outside of it.
 window.onclick = function closeModal(event) {
     if (event.target == document.getElementById("loginPopup")) {
         document.getElementById("loginPopup").style.display = "none";
@@ -108,8 +108,13 @@ function loginLogoutTxt() {
     }
 }
 
+// Subscribe to newsletter button
+document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thank you for signing up for our newsletter!");
+})
 
-// Proceed to reservation button
+// Continue to reservation button
 document.getElementById("bookingForm").addEventListener("submit", (e) => {
     e.preventDefault();
     document.getElementById("creditCardPopup").style.display = "block";

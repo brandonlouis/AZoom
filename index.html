@@ -219,10 +219,10 @@
                     <h2>Subscribe to our newsletter</h2>
                     <p>Get access to exclusive deals and promotions</p>
                 </span>
-                <span>
-                    <input type="email" placeholder="Enter your email">
-                    <button class="newsletterBtn" type="button">Subscribe</button>
-                </span>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
+                    <button class="newsletterBtn" type="submit">Subscribe</button>
+                </form>
             </div>
         </div><div class="clear"></div>
 
