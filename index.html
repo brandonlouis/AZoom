@@ -56,10 +56,8 @@
                     
                     <p id="invalidLogin">Invalid username and/or password</p>
 
-                    <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
             
-                    <label for="pwd"><b>Password:</b></label>
                     <input type="password" name="password" id="passwordField" placeholder="Password">
 
                     <input type="submit" value="Login" id="loginBtn" onclick="rememberMe()">
@@ -107,11 +105,11 @@
     
             <div class="aboutRight animateOnScroll">
                 <span>
-                    <h1>About Us</h1>
+                    <h1>About us</h1>
                     <h2>Wide selection of brands and models to choose from</h2>
                     <p>In addition to our <b>well maintained vehicles</b>, we have multiple locations throughout the <b>Central, West and East regions</b>, so you are sure to find an accessible pick-up and drop-off point near you.</p>
                 
-                    <button class="aboutBtn" type="button" onclick="location.href='html/fleet.html'">Find out more &#8640;</button>
+                    <button class="findOutBtn" type="button" onclick="location.href='html/fleet.html'">Find out more &#8640;</button>
                 </span>
             </div>
         </div><div class="clear"></div>
@@ -123,7 +121,7 @@
                     <span>
                         <h1>Why us?</h1>
                         <h2>We are the top EV rental company in Singapore</h2>
-                        <p>With over <b>2500+ satisfied customers</b> and <b>10 years of experience</b> in the Automotive industry, we are committed to continue providing our customers with a convenient and fuss-free rental experience.</p>
+                        <p>With over <b>2500+ satisfied customers</b> and <b>10 years of experience</b> in the Automotive industry, we are dedicated to providing our customers with a pleasant and hassle-free car rental experience.</p>
                     </span>
                 </div>
     
@@ -221,7 +219,7 @@
                 </span>
                 <form id="newsletterForm">
                     <input type="email" placeholder="Enter your email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
-                    <button class="newsletterBtn" type="submit">Subscribe</button>
+                    <button class="newsletterBtn" onsubmit="return false" onclick="newsletterSubscribe()">Subscribe</button>
                 </form>
             </div>
         </div><div class="clear"></div>

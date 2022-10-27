@@ -91,7 +91,7 @@ img {
 }
 
 /* Revert styles*/
-.footerRight p, .whyUsBtm h2, .whyUsBox p, .fleetItem h1, .fleetItem h2, .fleetPage .fleetTitle h1, .xrayContainer p {
+.footerRight p, .whyUsBtm h2, .fleetItem h1, .fleetItem h2, .fleetPage .fleetTitle h1, .xrayContainer p {
     all: revert;
 }
 
@@ -221,6 +221,7 @@ footer {
 
 .loginImg {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #invalidLogin {
@@ -356,7 +357,7 @@ footer {
     margin-left: 60px;
 }
 
-.aboutBtn {
+.findOutBtn {
     padding: 12px 35px;
 }
 
@@ -423,6 +424,7 @@ footer {
 
 .whyUsBox p {
     font-size: 20px;
+    margin-top: 0;
 }
 
 /* Index.html Fleet secton */
@@ -464,7 +466,7 @@ footer {
 }
 
 .fleetItem h1::first-letter {
-    color: #ffc107;
+    color: #eca216;
 }
 
 .fleetItem h1::after {

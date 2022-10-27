@@ -109,10 +109,11 @@ function loginLogoutTxt() {
 }
 
 // Subscribe to newsletter button
-document.getElementById("newsletterForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Thank you for signing up for our newsletter!");
-})
+function newsletterSubscribe() {
+    if (document.getElementById("newsletterForm").checkValidity()) {
+        alert("Thank you for signing up for our newsletter!");
+    }
+}
 
 // Continue to reservation button
 document.getElementById("bookingForm").addEventListener("submit", (e) => {
