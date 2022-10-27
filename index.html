@@ -217,9 +217,9 @@
                     <h2>Subscribe to our newsletter</h2>
                     <p>Get access to exclusive deals and promotions</p>
                 </span>
-                <form id="newsletterForm">
+                <form id="newsletterForm" onsubmit="return false">
                     <input type="email" placeholder="Enter your email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
-                    <button class="newsletterBtn" onsubmit="return false" onclick="newsletterSubscribe()">Subscribe</button>
+                    <button class="newsletterBtn" onclick="newsletterSubscribe()">Subscribe</button>
                 </form>
             </div>
         </div><div class="clear"></div>
