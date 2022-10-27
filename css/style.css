@@ -193,7 +193,7 @@ footer {
 
 /* LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  */
 /* Darken background */
-.modalBg, #successPage {
+.modalBg {
     display: none;
     position: fixed;
     z-index: 1;
@@ -770,9 +770,8 @@ footer {
 
 /* Success page */
 #successPage {
+    margin-top: 250px;
     background-color: #2d333d;
-    padding-top: 0;
-    animation: animatePopup 0.6s
 }
 
 .messageContainer {
@@ -787,6 +786,10 @@ footer {
 
 .redirectLogo {
     animation: spin 2s 0.4s ease-in-out backwards infinite;
+}
+
+.redirectLink {
+    color: white;
 }
 
 

@@ -154,17 +154,21 @@ document.getElementById("creditCardContent").addEventListener("submit", (e) => {
     if (visa.classList.contains("transparent") && mastercard.classList.contains("transparent") && amex.classList.contains("transparent")) {
         alert("Please check your card details.")
     } else {
-        document.getElementById("successPage").style.display= "flex";
-
-        var timeleft = 10;
-        var downloadTimer = setInterval(function(){
-            if(timeleft < 0){
-                clearInterval(downloadTimer);
-                window.location.href = "../html/howto.html";
-            } else {
-                document.getElementById("redirectCD").innerHTML = timeleft;
-            }
-            timeleft -= 1;
-        }, 1000);
+        location.href='../html/success.html'
     }
 })
+
+
+// Countdown begins on page load for success.html
+function redirectCountDown() {
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+        if(timeleft < 0){
+            clearInterval(downloadTimer);
+            window.location.href = "../html/howto.html";
+        } else {
+            document.getElementById("redirectCD").innerHTML = timeleft;
+        }
+        timeleft -= 1;
+    }, 1000);
+}
