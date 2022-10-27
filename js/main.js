@@ -122,6 +122,40 @@ document.getElementById("bookingForm").addEventListener("submit", (e) => {
 })
 
 
+// Min date for pickup date
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1;
+var yyyy = today.getFullYear();
+if (dd < 10) {
+   dd = '0' + dd;
+}
+
+if (mm < 10) {
+   mm = '0' + mm;
+}
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("pickUpDate").setAttribute("min", today);
+
+// Sets min return date to be 1 day after pickup date
+document.getElementById("pickUpDate").addEventListener("change", (e) => {
+    var pickUpDate = new Date(document.getElementById("pickUpDate").value);
+    pickUpDate.setDate(pickUpDate.getDate() + 1)
+
+    var dd = pickUpDate.getDate();
+    var mm = pickUpDate.getMonth() + 1;
+    var yyyy = pickUpDate.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    minRental = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("returnDate").setAttribute("min", minRental);
+})
+
+
 // Credit card validation
 const cardNumber = document.getElementById("cardNumber");
 let visa = document.getElementById("visa");

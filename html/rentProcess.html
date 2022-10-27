@@ -130,10 +130,10 @@
                         <div class="rentalDetails">
                             <div class="rentalDetailsLeft">
                                 <label for="pickUpDate">Pick-up Date:</label>
-                                <input type="date" id="pickUpDate" name="pickUpDate" required>
+                                <input type="date" id="pickUpDate" name="pickUpDate" max="2023-01-30" required>
                                 
                                 <label for="pickUpTime">Pick-up Time:</label>
-                                <input type="time" id="pickUpTime" name="pickUpTime" required>
+                                <input type="time" id="pickUpTime" name="pickUpTime" min="08:00" max="22:00" required>
                                 
                                 <label for="pickUpLocation">Pick-up Location:</label>
                                 <select id="pickUpLocation" name="pickUpLocation" required>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="rentalDetailsRight">
                                 <label for="returnDate">Return Date:</label>
-                                <input type="date" id="returnDate" name="returnDate" required>
+                                <input type="date" id="returnDate" name="returnDate" max="2023-01-31" required>
                                 
                                 <label for="returnTime">Return Time:</label>
                                 <input type="time" id="returnTime" name="returnTime" required>
