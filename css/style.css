@@ -130,6 +130,11 @@ img {
     text-decoration: none;
 }
 
+.navLinks a:hover {
+    color: rgb(190, 190, 190);
+    transition: 0.2s;
+}
+
 .navActive {
     color: #eca216 !important; 
 }
@@ -912,10 +917,6 @@ footer {
 
     .logoContainer img {
         margin: 4%;
-    }
-
-    .navLinks li {
-        margin: revert;
     }
 }
 
