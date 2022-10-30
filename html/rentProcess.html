@@ -13,15 +13,34 @@
             <div class="navContainer animateOnScroll">
                 <div class="homeLogo"><a href="../index.html"><img src="../img/logos/fullLogo-w.png" height="50px"></img></a></div>
 
-                <ul class="navLinks">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="fleet.html" class="navActive">Our Fleet</a></li>
-                    <li><a href="howto.html">How-to</a></li>
-                </ul>
+                <div class="navLinks">
+                    <a href="../index.html">Home</a>
+                    <a href="fleet.html" class="navActive">Our Fleet</a>
+                    <a href="howto.html">How-to</a>
+                </div>
 
                 <div class="navRight">
                     <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
                     <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
+                </div>
+                
+                <div class="navHamburger" onclick="dropDownNav()">
+                    <img src="../img/icons/hamburger.png">
+                </div>
+            </div>
+
+            <div id="modalNavContainer">
+                <div class="navLinks">
+                    <div class="modalLinkContainer">
+                        <form role="search"><input type="search" class="navSearchInput" placeholder="Search..." aria-label="Search"></form>
+                        <a href="../index.html">Home</a>
+                        <a href="fleet.html" class="navActive">Our Fleet</a>
+                        <a href="howto.html">How-to</a>
+                    </div>
+
+                    <div class="modalNavLoginContainer">
+                        <input id="navLoginBtn" type="submit" value="Login" onclick="loginLogoutTxt()"></button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -37,10 +56,8 @@
                     
                     <p id="invalidLogin">Invalid username and/or password</p>
 
-                    <label for="username"><b>Username:</b></label>
                     <input type="text" name="username" id="usernameField" placeholder="Username">
             
-                    <label for="pwd"><b>Password:</b></label>
                     <input type="password" name="password" id="passwordField" placeholder="Password">
 
                     <input type="submit" value="Login" id="loginBtn" onclick="rememberMe()">
@@ -113,10 +130,10 @@
                         <div class="rentalDetails">
                             <div class="rentalDetailsLeft">
                                 <label for="pickUpDate">Pick-up Date:</label>
-                                <input type="date" id="pickUpDate" name="pickUpDate" required>
+                                <input type="date" id="pickUpDate" name="pickUpDate" max="2023-01-30" required>
                                 
                                 <label for="pickUpTime">Pick-up Time:</label>
-                                <input type="time" id="pickUpTime" name="pickUpTime" required>
+                                <input type="time" id="pickUpTime" name="pickUpTime" min="08:00" max="22:00" required>
                                 
                                 <label for="pickUpLocation">Pick-up Location:</label>
                                 <select id="pickUpLocation" name="pickUpLocation" required>
@@ -127,7 +144,7 @@
                             </div>
                             <div class="rentalDetailsRight">
                                 <label for="returnDate">Return Date:</label>
-                                <input type="date" id="returnDate" name="returnDate" required>
+                                <input type="date" id="returnDate" name="returnDate" max="2023-01-31" required>
                                 
                                 <label for="returnTime">Return Time:</label>
                                 <input type="time" id="returnTime" name="returnTime" required>
@@ -200,26 +217,9 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="confirmResBtn">Confirm</button>
+                    <button class="confirmResBtn">Confirm</button>
                     <p style="font-size: 10px;">(Visa: 4716108999716531 | Master: 5281037048916168 | Amex: 371449635398431)</p>
             </form>
-        </div><div class="clear"></div>
-
-        <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
-
-        <div id="successPage">
-            <div class="messageContainer animateOnScroll">
-                <h2>Reservation successful!</h2>
-                <h1>Thank you for choosing AZoom!</h1>
-                <p>We have sent you an email confirmation.</p>
-                </br>
-                <p>You will receive an SMS reminder 1 day before your scheduled pickup time, followed by another 1 hour before.</p>
-                </br></br>
-                <img class="redirectLogo" src="../img/logos/logo-w.png" width="50px">
-                </br></br>
-                <p>You will be redirected in <strong id="redirectCD">10</strong> seconds.</p>
-            </div>
-            <!-- <canvas id="canvas"></canvas> -->
         </div><div class="clear"></div>
 
         <!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK --><!-- SECTION BREAK -->
