@@ -1,11 +1,13 @@
 # Car Rental Webpage (HTML, CSS, JavaScript)
-<img src="./img/logos/fullLogo-w.png" alt="drawing" width="200"/></br>
-A simple website for car rentals that emphasizes UI/UX design.
+<img src="./img/logos/fullLogo-w.png" alt="azoomLogo" width="200"/></br>
+A simple responsive website for car rentals that emphasizes UI/UX design.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -20,8 +22,9 @@ A simple website for car rentals that emphasizes UI/UX design.
 
 [Specifications.pdf](./Specifications.pdf)
 
-### Screenshot
+### Screenshots
 
+#### Desktop
 ![home](./screenshots/home.png)
 ![ourFleet](./screenshots/ourFleet.jpeg)
 ![howTo](./screenshots/howTo.jpeg)
@@ -30,6 +33,13 @@ A simple website for car rentals that emphasizes UI/UX design.
 ![reservationSuccessful](./screenshots/reservationSuccessful.jpeg)
 ![loginInfo](./screenshots/loginInfo.png)
 ![cardInfo](./screenshots/cardInfo.png)
+
+#### Mobile
+![home-Mobile](./screenshots/home-Mobile.jpg)
+![ourFleet-Mobile](./screenshots/ourFleet-Mobile.jpeg)
+![howTo-Mobile](./screenshots/howTo-Mobile.jpg)
+![reservationForm-Mobile](./screenshots/reservationForm-Mobile.jpeg)
+![reservationSuccessful-Mobile](./screenshots/reservationSuccessful-Mobile.jpeg)
 
 ### Links
 
