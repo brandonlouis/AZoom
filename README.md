@@ -1,11 +1,13 @@
 # Car Rental Webpage (HTML, CSS, JavaScript)
-<img src="./img/logos/fullLogo-w.png" alt="drawing" width="200"/></br>
-A simple website for car rentals that emphasizes UI/UX design.
+<img src="./img/logos/fullLogo-w.png" alt="azoomLogo" width="200"/></br>
+A simple responsive website for car rentals that emphasizes UI/UX design.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshot)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -21,15 +23,23 @@ A simple website for car rentals that emphasizes UI/UX design.
 [Specifications.pdf](./Specifications.pdf)
 
 ### Screenshot
+#### Desktop
+<img src="./screenshots/home.png" alt="home" height="1500"/>
+<img src="./screenshots/ourFleet.jpeg" alt="ourFleet" height="1000"/>
+<img src="./screenshots/howTo.jpeg" alt="howTo" height="800"/>
+<img src="./screenshots/vehicleListing.png" alt="vehicleListing" height="700"/>
+<img src="./screenshots/reservationForm.jpeg" alt="reservationForm" height="700"/>
+<img src="./screenshots/reservationSuccessful.jpeg" alt="reservationSuccessful" height="500"/>
+<img src="./screenshots/loginInfo.png" alt="loginInfo" height="350"/>
+<img src="./screenshots/cardInfo.png" alt="cardInfo" height="350"/>
 
-![home](./screenshots/home.png)
-![ourFleet](./screenshots/ourFleet.jpeg)
-![howTo](./screenshots/howTo.jpeg)
-![vehicleListing](./screenshots/vehicleListing.png)
-![reservationForm](./screenshots/reservationForm.jpeg)
-![reservationSuccessful](./screenshots/reservationSuccessful.jpeg)
-![loginInfo](./screenshots/loginInfo.png)
-![cardInfo](./screenshots/cardInfo.png)
+#### Mobile
+<img src="./screenshots/home-Mobile.jpg" alt="home-Mobile" height="1300"/>
+<img src="./screenshots/ourFleet-Mobile.jpeg" alt="ourFleet-Mobile" height="1300"/>
+<img src="./screenshots/howTo-Mobile.jpg" alt="howTo-Mobile" height="1000"/>
+<img src="./screenshots/reservationForm-Mobile.jpeg" alt="reservationForm-Mobile" height="1000"/>
+<img src="./screenshots/reservationSuccessful-Mobile.jpeg" alt="reservationSuccessful-Mobile" height="700"/>
+
 
 ### Links
 

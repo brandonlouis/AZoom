@@ -947,6 +947,10 @@ footer {
         width: 70%;
         margin: 5% auto 0;
     }
+
+    .footerCredit {
+        font-size: 10px;
+    }
 }
 
 /* Responsive navbar */
