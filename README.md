@@ -26,7 +26,7 @@ A simple website for car rentals that emphasizes UI/UX design.
 ![ourFleet](./screenshots/ourFleet.jpeg)
 ![howTo](./screenshots/howTo.jpeg)
 ![vehicleListing](./screenshots/vehicleListing.png)
-![reservationPage](./screenshots/reservationPage.jpeg)
+![reservationForm](./screenshots/reservationForm.jpeg)
 ![reservationSuccessful](./screenshots/reservationSuccessful.jpeg)
 ![loginInfo](./screenshots/loginInfo.png)
 ![cardInfo](./screenshots/cardInfo.png)

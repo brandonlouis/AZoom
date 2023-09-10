@@ -192,6 +192,18 @@ footer {
     color: white;
 }
 
+/* Footer credit */
+.footerCredit {
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.footerCredit a {
+    color: darkgray;
+}
+
 
 
 
@@ -606,7 +618,7 @@ footer {
 
 
 
-/* RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML RENTPROCESS.HTML */
+/* RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML RENTFORM.HTML */
 .reservationContainer {
     display: flex;
 }
