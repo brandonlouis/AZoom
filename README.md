@@ -50,7 +50,7 @@ Without using any external libraries or frameworks, I was forced to push the lim
 
 ### Continued development
 
-I would have preferred to finish the search and filter functions, as well as have each vehicle listing have its own reservation page, given that the project's scope was purely frontend with basic functions. I will be revisiting this project down the line to finish up the remaining functions.
+I would have preferred to finish the search and filter functions, as well as have each vehicle listing have its own reservation page, given that the project's scope was purely frontend with basic functions.
 
 ### Useful resources
 

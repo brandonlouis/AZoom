@@ -137,25 +137,6 @@ if (mm < 10) {
 today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("pickUpDate").setAttribute("min", today);
 
-// Calculate the date 3 months from today
-var maxDate = new Date();
-maxDate.setMonth(maxDate.getMonth() + 3);
-
-var maxDateDD = maxDate.getDate();
-var maxDateMM = maxDate.getMonth() + 1;
-var maxDateYYYY = maxDate.getFullYear();
-
-if (maxDateDD < 10) {
-   maxDateDD = '0' + maxDateDD;
-}
-
-if (maxDateMM < 10) {
-   maxDateMM = '0' + maxDateMM;
-}
-
-var maxDate = maxDateYYYY + '-' + maxDateMM + '-' + maxDateDD;
-document.getElementById("pickUpDate").setAttribute("max", maxDate);
-
 // Sets min return date to be 1 day after pickup date
 document.getElementById("pickUpDate").addEventListener("change", (e) => {
     var pickUpDate = new Date(document.getElementById("pickUpDate").value);
