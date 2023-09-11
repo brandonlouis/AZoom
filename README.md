@@ -17,7 +17,7 @@ A simple responsive website for car rentals that emphasizes UI/UX design.
 ## Overview
 
 ### The challenge
-
+No frameworks/libraries. Only plain HTML, CSS and JavaScript</br>
 [Specifications.pdf](./Specifications.pdf)
 
 ### Screenshots
