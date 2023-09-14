@@ -6,8 +6,6 @@ A simple responsive website for car rentals that emphasizes UI/UX design.
 
 - [Overview](#overview)
   - [Screenshots](#screenshots)
-    - [Desktop](#desktop)
-    - [Mobile](#mobile)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -22,22 +20,16 @@ No frameworks/libraries. Only plain HTML, CSS and JavaScript</br>
 
 ### Screenshots
 
-#### Desktop
-![home](./screenshots/home.png)
-![ourFleet](./screenshots/ourFleet.jpeg)
-![howTo](./screenshots/howTo.jpeg)
-![vehicleListing](./screenshots/vehicleListing.png)
-![reservationForm](./screenshots/reservationForm.jpeg)
-![reservationSuccessful](./screenshots/reservationSuccessful.jpeg)
+![desktop1](./screenshots/desktop1.png)
+![desktop2](./screenshots/desktop2.png)
+![desktop3](./screenshots/desktop3.png)
+![mobile1](./screenshots/mobile1.png)
+![mobile2](./screenshots/mobile2.png)
+
 ![loginInfo](./screenshots/loginInfo.png)
+![vehicleListing](./screenshots/vehicleListing.png)
 ![cardInfo](./screenshots/cardInfo.png)
 
-#### Mobile
-![home-Mobile](./screenshots/home-Mobile.jpg)
-![ourFleet-Mobile](./screenshots/ourFleet-Mobile.jpeg)
-![howTo-Mobile](./screenshots/howTo-Mobile.jpg)
-![reservationForm-Mobile](./screenshots/reservationForm-Mobile.jpeg)
-![reservationSuccessful-Mobile](./screenshots/reservationSuccessful-Mobile.jpeg)
 
 ### Links
 
