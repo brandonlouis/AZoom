@@ -25,11 +25,7 @@ No frameworks/libraries. Only plain HTML, CSS and JavaScript</br>
 ![desktop3](./screenshots/desktop3.png)
 ![mobile1](./screenshots/mobile1.png)
 ![mobile2](./screenshots/mobile2.png)
-
-![loginInfo](./screenshots/loginInfo.png)
-![vehicleListing](./screenshots/vehicleListing.png)
-![cardInfo](./screenshots/cardInfo.png)
-
+![notes](./screenshots/notes.png)
 
 ### Links
 
