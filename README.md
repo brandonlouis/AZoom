@@ -1,24 +1,19 @@
-# Car Rental Webpage (HTML, CSS, JavaScript)
-<img src="./img/logos/fullLogo-w.png" alt="azoomLogo" width="200"/></br>
-A simple responsive website for car rentals that emphasizes UI/UX design.
+![preview](./screenshots/preview.png)
 
-## Table of contents
+<h1 align="center">Car Rental Website (HTML, CSS, JavaScript)</h1>
 
-- [Overview](#overview)
-  - [Screenshots](#screenshots)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+<div align="center">
 
-## Overview
+[Live Site](https://blc7896530-azoom.netlify.app/index.html) | [Specifications](./Specifications.pdf)
 
-### The challenge
-No frameworks/libraries. Only plain HTML, CSS and JavaScript</br>
-[Specifications.pdf](./Specifications.pdf)
+A responsive car rental website that emphasizes UI/UX design.
 
-### Screenshots
+</div>
+
+## The challenge
+No frameworks/libraries allowed. Only plain HTML, CSS and JavaScript</br>
+
+## Screenshots
 
 ![desktop1](./screenshots/desktop1.png)
 ![desktop2](./screenshots/desktop2.png)
@@ -27,20 +22,14 @@ No frameworks/libraries. Only plain HTML, CSS and JavaScript</br>
 ![mobile2](./screenshots/mobile2.png)
 ![notes](./screenshots/notes.png)
 
-### Links
-
-- Live Site URL: https://blc7896530-azoom.netlify.app/index.html
-
-## My process
-
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - JavaScript
 - Adobe Photoshop
 
-### Useful resources
+## Useful resources
 
 - [SGCarMart](https://www.sgcarmart.com/main/index.php) - Images for every car listing has been acquired from the "New Cars" section of SGCarMart.
 
